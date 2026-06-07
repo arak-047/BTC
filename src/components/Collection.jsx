@@ -7,48 +7,48 @@ const products = [
     id: 1,
     name: 'Urban Explorer Cargo',
     price: '₹1,299',
-    productImg: '/assets/PD1.png',
-    lifestyleImg: '/assets/K1-PD1.png',
+    productImg: './assets/PD1.png',
+    lifestyleImg: './assets/K1-PD1.png',
     color: 'Sand'
   },
   {
     id: 2,
     name: 'Active Street Cargo',
     price: '₹1,499',
-    productImg: '/assets/PD2.png',
-    lifestyleImg: '/assets/K2-PD2.png',
+    productImg: './assets/PD2.png',
+    lifestyleImg: './assets/K2-PD2.png',
     color: 'Midnight Black'
   },
   {
     id: 3,
     name: 'Tactical Stealth Cargo',
     price: '₹1,399',
-    productImg: '/assets/PD3.png',
-    lifestyleImg: '/assets/K3-PD3.png',
+    productImg: './assets/PD3.png',
+    lifestyleImg: './assets/K3-PD3.png',
     color: 'Olive Green'
   },
   {
     id: 4,
     name: 'Neon Accents Cargo',
     price: '₹1,599',
-    productImg: '/assets/PD4.png',
-    lifestyleImg: '/assets/K4-PD4.png',
+    productImg: './assets/PD4.png',
+    lifestyleImg: './assets/K4-PD4.png',
     color: 'Concrete Grey'
   },
   {
     id: 5,
     name: 'Camo Adventure Cargo',
     price: '₹1,499',
-    productImg: '/assets/PD5.png',
-    lifestyleImg: '/assets/K5-PD5.png',
+    productImg: './assets/PD5.png',
+    lifestyleImg: './assets/K5-PD5.png',
     color: 'Desert Camo'
   },
   {
     id: 6,
     name: 'Utility Premium Cargo',
     price: '₹1,699',
-    productImg: '/assets/PD6.png',
-    lifestyleImg: '/assets/K6-PD6.png',
+    productImg: './assets/PD6.png',
+    lifestyleImg: './assets/K6-PD6.png',
     color: 'Navy Blue'
   }
 ];
