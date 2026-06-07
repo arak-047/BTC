@@ -1,0 +1,160 @@
+.collection-section {
+  padding: 8rem 0;
+  background-color: var(--bg-color);
+}
+
+.collection-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.section-title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  margin-bottom: 1rem;
+}
+
+.section-subtitle {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2.5rem 1.5rem;
+}
+
+.product-card {
+  position: relative;
+  cursor: pointer;
+  group: true;
+}
+
+.product-image-container {
+  position: relative;
+  aspect-ratio: 3/4;
+  overflow: hidden;
+  border-radius: 8px;
+  background-color: var(--surface-color);
+  margin-bottom: 1.5rem;
+}
+
+.img-product, .img-lifestyle {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.img-product {
+  opacity: 1;
+  z-index: 2;
+}
+
+.img-lifestyle {
+  opacity: 0;
+  z-index: 1;
+  transform: scale(1.05);
+}
+
+/* Hover Effects */
+.product-card:hover .img-product {
+  opacity: 0;
+}
+
+.product-card:hover .img-lifestyle {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 3;
+}
+
+.product-badge {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background-color: var(--text-primary);
+  color: var(--bg-color);
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  z-index: 4;
+}
+
+.add-to-cart-btn {
+  position: absolute;
+  bottom: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  background-color: rgba(255, 107, 0, 0.9);
+  color: white;
+  padding: 0.75rem;
+  font-weight: 600;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0;
+  transition: all 0.3s ease;
+  z-index: 4;
+  backdrop-filter: blur(4px);
+}
+
+.product-card:hover .add-to-cart-btn {
+  bottom: 1rem;
+  opacity: 1;
+}
+
+.add-to-cart-btn:hover {
+  background-color: var(--accent-hover);
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.product-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.product-price {
+  color: var(--text-primary);
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.product-name {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+@media (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem 1rem;
+  }
+  
+  .img-lifestyle {
+    opacity: 0; /* Keep hover effect on mobile or we can make it always visible, but hover usually means tap on mobile. Let's keep it clean. */
+  }
+}
+
+@media (max-width: 480px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+}
