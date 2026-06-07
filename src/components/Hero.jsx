@@ -8,7 +8,7 @@ const Hero = () => {
     <section className="hero-section">
       <div className="hero-background">
         <img 
-          src="/assets/catalogue-section.png" 
+          src="./assets/catalogue-section.png" 
           alt="Kids Cargo Action" 
           className="hero-bg-img" 
         />

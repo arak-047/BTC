@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="footer-grid">
           <div className="footer-brand">
             <div className="footer-logo">
-              <img src="/assets/logo.png" alt="BTC London Logo" className="footer-logo-img" />
+              <img src="./assets/logo.png" alt="BTC London Logo" className="footer-logo-img" />
               <span className="footer-brand-text">BTC London</span>
             </div>
             <p className="footer-desc">

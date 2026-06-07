@@ -27,7 +27,7 @@ const Navbar = () => {
 
         {/* Logo */}
         <div className="navbar-logo">
-          <img src="/assets/logo.png" alt="BTC London Logo" className="logo-img" />
+          <img src="./assets/logo.png" alt="BTC London Logo" className="logo-img" />
           <span className="brand-text">BTC London</span>
         </div>
 

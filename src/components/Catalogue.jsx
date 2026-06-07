@@ -15,7 +15,7 @@ const Catalogue = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <img src="/assets/catalogue-section.png" alt="BTC London Lifestyle" className="catalogue-img" />
+            <img src="./assets/catalogue-section.png" alt="BTC London Lifestyle" className="catalogue-img" />
             <div className="catalogue-overlay"></div>
           </motion.div>
           
