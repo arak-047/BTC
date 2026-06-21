@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>BTC LONDON - Latest Drops</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&amp;family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-surface": "#e2e2e2",
+                        "surface": "#131313",
+                        "on-error-container": "#ffdad6",
+                        "secondary-fixed": "#ffdea5",
+                        "on-secondary-fixed-variant": "#5d4201",
+                        "primary-fixed": "#ffdbcc",
+                        "surface-container-lowest": "#0e0e0e",
+                        "surface-container-high": "#2a2a2a",
+                        "on-primary": "#571f00",
+                        "outline-variant": "#5a4136",
+                        "inverse-primary": "#a14000",
+                        "on-tertiary-fixed-variant": "#454744",
+                        "on-secondary": "#412d00",
+                        "tertiary-fixed": "#e3e3de",
+                        "surface-container": "#1f1f1f",
+                        "secondary-fixed-dim": "#e9c176",
+                        "on-surface-variant": "#e2bfb0",
+                        "surface-dim": "#131313",
+                        "on-secondary-container": "#dab36a",
+                        "on-background": "#e2e2e2",
+                        "tertiary-fixed-dim": "#c6c7c2",
+                        "secondary-container": "#604403",
+                        "surface-variant": "#353535",
+                        "on-primary-fixed-variant": "#7b2f00",
+                        "surface-container-low": "#1b1b1b",
+                        "background": "#131313",
+                        "surface-container-highest": "#353535",
+                        "primary-fixed-dim": "#ffb694",
+                        "on-tertiary": "#2f312e",
+                        "primary": "#ffb694",
+                        "surface-tint": "#ffb694",
+                        "surface-bright": "#393939",
+                        "inverse-on-surface": "#303030",
+                        "tertiary": "#c6c7c2",
+                        "on-secondary-fixed": "#261900",
+                        "inverse-surface": "#e2e2e2",
+                        "primary-container": "#ff6a00",
+                        "on-tertiary-fixed": "#1a1c19",
+                        "outline": "#a98a7d",
+                        "tertiary-container": "#989995",
+                        "on-error": "#690005",
+                        "secondary": "#e9c176",
+                        "on-primary-container": "#571f00",
+                        "on-primary-fixed": "#351000",
+                        "error-container": "#93000a",
+                        "on-tertiary-container": "#2f312e",
+                        "error": "#ffb4ab"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "base": "8px",
+                        "container-max": "1440px",
+                        "section-gap": "128px",
+                        "margin-mobile": "16px",
+                        "gutter": "24px",
+                        "margin-desktop": "64px"
+                    },
+                    "fontFamily": {
+                        "headline-lg-mobile": ["Anton"],
+                        "subheading-md": ["Archivo Narrow"],
+                        "label-mono": ["Space Mono"],
+                        "display-xl": ["Anton"],
+                        "headline-lg": ["Anton"],
+                        "body-lg": ["Archivo Narrow"],
+                        "body-md": ["Archivo Narrow"]
+                    },
+                    "fontSize": {
+                        "headline-lg-mobile": ["36px", { "lineHeight": "40px", "letterSpacing": "0.02em", "fontWeight": "400" }],
+                        "subheading-md": ["20px", { "lineHeight": "28px", "letterSpacing": "0.1em", "fontWeight": "600" }],
+                        "label-mono": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "400" }],
+                        "display-xl": ["84px", { "lineHeight": "84px", "letterSpacing": "0.05em", "fontWeight": "400" }],
+                        "headline-lg": ["48px", { "lineHeight": "52px", "letterSpacing": "0.02em", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "26px", "letterSpacing": "0.01em", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #000000;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #ffb694;
+        }
+        body {
+            @apply custom-scrollbar;
+            background: linear-gradient(to bottom, #000000 0%, #151515 50%, #050505 100%);
+            color: #e2e2e2;
+        }
+        .product-card-group:hover .quick-add-overlay {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-black/90 backdrop-blur-md border-b border-secondary/15 transition-all duration-300" id="top-nav">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-base w-full max-w-container-max mx-auto h-20">
+<a class="flex items-center gap-4 hover:text-primary transition-colors duration-300" href="index.html">
+<img alt="BTC LONDON Logo" class="h-8 md:h-12 w-auto object-contain" src="./assets/logo.png"/>
+<span class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-background uppercase tracking-tighter hidden md:block">BTC LONDON</span>
+</a>
+<ul class="hidden md:flex items-center gap-8">
+<li><a class="text-primary border-b-2 border-primary pb-1 font-subheading-md text-subheading-md uppercase hover:text-primary transition-colors duration-300 opacity-80" href="shop-drops.html">SHOP DROPS</a></li>
+<li><a class="text-on-surface-variant font-subheading-md text-subheading-md uppercase hover:text-primary transition-colors duration-300" href="index.html#cargo">CARGO FITS</a></li>
+<li><a class="text-on-surface-variant font-subheading-md text-subheading-md uppercase hover:text-primary transition-colors duration-300" href="index.html#about">ABOUT BTC</a></li>
+<li><a class="text-on-surface-variant font-subheading-md text-subheading-md uppercase hover:text-primary transition-colors duration-300" href="ai-pocket.html">AI POCKET</a></li>
+</ul>
+<div class="flex items-center gap-4">
+<button aria-label="shopping_cart" class="text-on-surface-variant hover:text-primary transition-colors duration-300">
+<span class="material-symbols-outlined text-[24px]">shopping_cart</span>
+</button>
+<button aria-label="menu" class="md:hidden text-on-surface-variant hover:text-primary transition-colors duration-300" id="mobile-menu-toggle">
+<span class="material-symbols-outlined text-[24px]" id="menu-icon">menu</span>
+</button>
+</div>
+</div>
+<!-- Mobile Menu Panel (Hidden by default) -->
+<div class="hidden md:hidden fixed inset-x-0 top-20 bg-background border-b border-secondary/20 flex flex-col items-center py-8 space-y-6 z-40" id="mobile-menu">
+<a class="text-primary font-subheading-md text-subheading-md uppercase hover:text-primary transition-colors duration-300" href="shop-drops.html">
+                    SHOP DROPS
+                </a>
+<a class="text-on-surface-variant font-subheading-md text-subheading-md uppercase hover:text-primary transition-colors duration-300" href="index.html#cargo">
+                    CARGO FITS
+                </a>
+<a class="text-on-surface-variant font-subheading-md text-subheading-md uppercase hover:text-primary transition-colors duration-300" href="index.html#about">
+                    ABOUT BTC
+                </a>
+<a class="text-on-surface-variant font-subheading-md text-subheading-md uppercase hover:text-primary transition-colors duration-300" href="ai-pocket.html">
+                    AI POCKET
+                </a>
+</div>
+</nav>
+<main class="pt-[100px] flex-grow">
+<!-- Hero Section -->
+<header class="w-full px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto py-12 md:py-20 flex flex-col items-center justify-center text-center border-b border-secondary/15">
+<h1 class="font-display-xl text-[48px] md:text-display-xl uppercase tracking-tighter leading-none mb-6">
+                LATEST <span class="text-primary">DROPS</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
+                Engineered for urban utility. High-performance materials meets brutalist aesthetics.
+            </p>
+</header>
+<!-- Product Grid -->
+<section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto py-12 md:py-16">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-gutter gap-y-12">
+
+<!-- Product 1 -->
+<article class="group product-card-group flex flex-col bg-surface-container/30 relative border-b-2 border-transparent hover:border-primary transition-colors duration-300">
+<div class="relative w-full aspect-[0.75] overflow-hidden bg-black/40 image-container-clickable cursor-zoom-in">
+<div class="absolute top-4 left-4 z-10 bg-black text-white px-3 py-1 font-label-mono text-label-mono uppercase tracking-widest">NEW</div>
+<img alt="Urban Explorer Cargo" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500" src="./assets/PD1.png"/>
+<!-- Quick Add Overlay -->
+<div class="quick-add-overlay absolute inset-0 bg-black/40 flex items-end p-4 opacity-0 transform translate-y-4 transition-all duration-300 z-20">
+<button class="w-full bg-primary text-black font-headline-lg-mobile text-[20px] py-3 uppercase tracking-wider hover:bg-[#ffcba5] transition-colors">
+                                QUICK ADD
+                            </button>
+</div>
+</div>
+<div class="p-4 flex flex-col gap-2 bg-surface-container/60 text-white border-t border-secondary/15 flex-grow justify-between">
+<h3 class="font-headline-lg-mobile text-[22px] uppercase leading-none truncate" title="Urban Explorer Cargo">Urban Explorer Cargo</h3>
+<p class="font-label-mono text-label-mono text-secondary">₹4,499</p>
+</div>
+</article>
+
+<!-- Product 2 -->
+<article class="group product-card-group flex flex-col bg-surface-container/30 relative border-b-2 border-transparent hover:border-primary transition-colors duration-300">
+<div class="relative w-full aspect-[0.75] overflow-hidden bg-black/40 image-container-clickable cursor-zoom-in">
+<div class="absolute top-4 left-4 z-10 bg-black text-white px-3 py-1 font-label-mono text-label-mono uppercase tracking-widest">NEW</div>
+<img alt="Active Street Cargo" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500" src="./assets/PD2.png"/>
+<!-- Quick Add Overlay -->
+<div class="quick-add-overlay absolute inset-0 bg-black/40 flex items-end p-4 opacity-0 transform translate-y-4 transition-all duration-300 z-20">
+<button class="w-full bg-primary text-black font-headline-lg-mobile text-[20px] py-3 uppercase tracking-wider hover:bg-[#ffcba5] transition-colors">
+                                QUICK ADD
+                            </button>
+</div>
+</div>
+<div class="p-4 flex flex-col gap-2 bg-surface-container/60 text-white border-t border-secondary/15 flex-grow justify-between">
+<h3 class="font-headline-lg-mobile text-[22px] uppercase leading-none truncate" title="Active Street Cargo">Active Street Cargo</h3>
+<p class="font-label-mono text-label-mono text-secondary">₹5,299</p>
+</div>
+</article>
+
+<!-- Product 3 -->
+<article class="group product-card-group flex flex-col bg-surface-container/30 relative border-b-2 border-transparent hover:border-primary transition-colors duration-300">
+<div class="relative w-full aspect-[0.75] overflow-hidden bg-black/40 image-container-clickable cursor-zoom-in">
+
+<img alt="Tactical Stealth Cargo" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500" src="./assets/PD3.png"/>
+<!-- Quick Add Overlay -->
+<div class="quick-add-overlay absolute inset-0 bg-black/40 flex items-end p-4 opacity-0 transform translate-y-4 transition-all duration-300 z-20">
+<button class="w-full bg-primary text-black font-headline-lg-mobile text-[20px] py-3 uppercase tracking-wider hover:bg-[#ffcba5] transition-colors">
+                                QUICK ADD
+                            </button>
+</div>
+</div>
+<div class="p-4 flex flex-col gap-2 bg-surface-container/60 text-white border-t border-secondary/15 flex-grow justify-between">
+<h3 class="font-headline-lg-mobile text-[22px] uppercase leading-none truncate" title="Tactical Stealth Cargo">Tactical Stealth Cargo</h3>
+<p class="font-label-mono text-label-mono text-secondary">₹4,899</p>
+</div>
+</article>
+
+<!-- Product 4 -->
+<article class="group product-card-group flex flex-col bg-surface-container/30 relative border-b-2 border-transparent hover:border-primary transition-colors duration-300">
+<div class="relative w-full aspect-[0.75] overflow-hidden bg-black/40 image-container-clickable cursor-zoom-in">
+
+<img alt="Neon Accents Cargo" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500" src="./assets/PD4.png"/>
+<!-- Quick Add Overlay -->
+<div class="quick-add-overlay absolute inset-0 bg-black/40 flex items-end p-4 opacity-0 transform translate-y-4 transition-all duration-300 z-20">
+<button class="w-full bg-primary text-black font-headline-lg-mobile text-[20px] py-3 uppercase tracking-wider hover:bg-[#ffcba5] transition-colors">
+                                QUICK ADD
+                            </button>
+</div>
+</div>
+<div class="p-4 flex flex-col gap-2 bg-surface-container/60 text-white border-t border-secondary/15 flex-grow justify-between">
+<h3 class="font-headline-lg-mobile text-[22px] uppercase leading-none truncate" title="Neon Accents Cargo">Neon Accents Cargo</h3>
+<p class="font-label-mono text-label-mono text-secondary">₹5,999</p>
+</div>
+</article>
+
+<!-- Product 5 -->
+<article class="group product-card-group flex flex-col bg-surface-container/30 relative border-b-2 border-transparent hover:border-primary transition-colors duration-300">
+<div class="relative w-full aspect-[0.75] overflow-hidden bg-black/40 image-container-clickable cursor-zoom-in">
+<div class="absolute top-4 left-4 z-10 bg-black text-white px-3 py-1 font-label-mono text-label-mono uppercase tracking-widest">NEW</div>
+<img alt="Camo Adventure Cargo" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500" src="./assets/PD5.png"/>
+<!-- Quick Add Overlay -->
+<div class="quick-add-overlay absolute inset-0 bg-black/40 flex items-end p-4 opacity-0 transform translate-y-4 transition-all duration-300 z-20">
+<button class="w-full bg-primary text-black font-headline-lg-mobile text-[20px] py-3 uppercase tracking-wider hover:bg-[#ffcba5] transition-colors">
+                                QUICK ADD
+                            </button>
+</div>
+</div>
+<div class="p-4 flex flex-col gap-2 bg-surface-container/60 text-white border-t border-secondary/15 flex-grow justify-between">
+<h3 class="font-headline-lg-mobile text-[22px] uppercase leading-none truncate" title="Camo Adventure Cargo">Camo Adventure Cargo</h3>
+<p class="font-label-mono text-label-mono text-secondary">₹3,999</p>
+</div>
+</article>
+
+<!-- Product 6 -->
+<article class="group product-card-group flex flex-col bg-surface-container/30 relative border-b-2 border-transparent hover:border-primary transition-colors duration-300">
+<div class="relative w-full aspect-[0.75] overflow-hidden bg-black/40 image-container-clickable cursor-zoom-in">
+
+<img alt="Utility Premium Cargo" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500" src="./assets/PD6.png"/>
+<!-- Quick Add Overlay -->
+<div class="quick-add-overlay absolute inset-0 bg-black/40 flex items-end p-4 opacity-0 transform translate-y-4 transition-all duration-300 z-20">
+<button class="w-full bg-primary text-black font-headline-lg-mobile text-[20px] py-3 uppercase tracking-wider hover:bg-[#ffcba5] transition-colors">
+                                QUICK ADD
+                            </button>
+</div>
+</div>
+<div class="p-4 flex flex-col gap-2 bg-surface-container/60 text-white border-t border-secondary/15 flex-grow justify-between">
+<h3 class="font-headline-lg-mobile text-[22px] uppercase leading-none truncate" title="Utility Premium Cargo">Utility Premium Cargo</h3>
+<p class="font-label-mono text-label-mono text-secondary">₹4,699</p>
+</div>
+</article>
+
+<!-- Product 7 -->
+<article class="group product-card-group flex flex-col bg-surface-container/30 relative border-b-2 border-transparent hover:border-primary transition-colors duration-300">
+<div class="relative w-full aspect-[0.75] overflow-hidden bg-black/40 image-container-clickable cursor-zoom-in">
+
+<img alt="The Urban Minimalist" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500" src="./assets/PD7.png"/>
+<!-- Quick Add Overlay -->
+<div class="quick-add-overlay absolute inset-0 bg-black/40 flex items-end p-4 opacity-0 transform translate-y-4 transition-all duration-300 z-20">
+<button class="w-full bg-primary text-black font-headline-lg-mobile text-[20px] py-3 uppercase tracking-wider hover:bg-[#ffcba5] transition-colors">
+                                QUICK ADD
+                            </button>
+</div>
+</div>
+<div class="p-4 flex flex-col gap-2 bg-surface-container/60 text-white border-t border-secondary/15 flex-grow justify-between">
+<h3 class="font-headline-lg-mobile text-[22px] uppercase leading-none truncate" title="The Urban Minimalist">The Urban Minimalist</h3>
+<p class="font-label-mono text-label-mono text-secondary">₹4,499</p>
+</div>
+</article>
+
+<!-- Product 8 -->
+<article class="group product-card-group flex flex-col bg-surface-container/30 relative border-b-2 border-transparent hover:border-primary transition-colors duration-300">
+<div class="relative w-full aspect-[0.75] overflow-hidden bg-black/40 image-container-clickable cursor-zoom-in">
+
+<img alt="Zip & Patch Cargo" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500" src="./assets/PD8.png"/>
+<!-- Quick Add Overlay -->
+<div class="quick-add-overlay absolute inset-0 bg-black/40 flex items-end p-4 opacity-0 transform translate-y-4 transition-all duration-300 z-20">
+<button class="w-full bg-primary text-black font-headline-lg-mobile text-[20px] py-3 uppercase tracking-wider hover:bg-[#ffcba5] transition-colors">
+                                QUICK ADD
+                            </button>
+</div>
+</div>
+<div class="p-4 flex flex-col gap-2 bg-surface-container/60 text-white border-t border-secondary/15 flex-grow justify-between">
+<h3 class="font-headline-lg-mobile text-[22px] uppercase leading-none truncate" title="Zip & Patch Cargo">Zip & Patch Cargo</h3>
+<p class="font-label-mono text-label-mono text-secondary">₹5,299</p>
+</div>
+</article>
+
+<!-- Product 9 -->
+<article class="group product-card-group flex flex-col bg-surface-container/30 relative border-b-2 border-transparent hover:border-primary transition-colors duration-300">
+<div class="relative w-full aspect-[0.75] overflow-hidden bg-black/40 image-container-clickable cursor-zoom-in">
+<div class="absolute top-4 left-4 z-10 bg-black text-white px-3 py-1 font-label-mono text-label-mono uppercase tracking-widest">NEW</div>
+<img alt="The Pastel Utility" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500" src="./assets/PD9.png"/>
+<!-- Quick Add Overlay -->
+<div class="quick-add-overlay absolute inset-0 bg-black/40 flex items-end p-4 opacity-0 transform translate-y-4 transition-all duration-300 z-20">
+<button class="w-full bg-primary text-black font-headline-lg-mobile text-[20px] py-3 uppercase tracking-wider hover:bg-[#ffcba5] transition-colors">
+                                QUICK ADD
+                            </button>
+</div>
+</div>
+<div class="p-4 flex flex-col gap-2 bg-surface-container/60 text-white border-t border-secondary/15 flex-grow justify-between">
+<h3 class="font-headline-lg-mobile text-[22px] uppercase leading-none truncate" title="The Pastel Utility">The Pastel Utility</h3>
+<p class="font-label-mono text-label-mono text-secondary">₹4,899</p>
+</div>
+</article>
+
+<!-- Product 10 -->
+<article class="group product-card-group flex flex-col bg-surface-container/30 relative border-b-2 border-transparent hover:border-primary transition-colors duration-300">
+<div class="relative w-full aspect-[0.75] overflow-hidden bg-black/40 image-container-clickable cursor-zoom-in">
+
+<img alt="The Techwear Edge" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500" src="./assets/PD10.png"/>
+<!-- Quick Add Overlay -->
+<div class="quick-add-overlay absolute inset-0 bg-black/40 flex items-end p-4 opacity-0 transform translate-y-4 transition-all duration-300 z-20">
+<button class="w-full bg-primary text-black font-headline-lg-mobile text-[20px] py-3 uppercase tracking-wider hover:bg-[#ffcba5] transition-colors">
+                                QUICK ADD
+                            </button>
+</div>
+</div>
+<div class="p-4 flex flex-col gap-2 bg-surface-container/60 text-white border-t border-secondary/15 flex-grow justify-between">
+<h3 class="font-headline-lg-mobile text-[22px] uppercase leading-none truncate" title="The Techwear Edge">The Techwear Edge</h3>
+<p class="font-label-mono text-label-mono text-secondary">₹5,999</p>
+</div>
+</article>
+
+<!-- Product 11 -->
+<article class="group product-card-group flex flex-col bg-surface-container/30 relative border-b-2 border-transparent hover:border-primary transition-colors duration-300">
+<div class="relative w-full aspect-[0.75] overflow-hidden bg-black/40 image-container-clickable cursor-zoom-in">
+
+<img alt="Minimal Cargo" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500" src="./assets/PD11.png"/>
+<!-- Quick Add Overlay -->
+<div class="quick-add-overlay absolute inset-0 bg-black/40 flex items-end p-4 opacity-0 transform translate-y-4 transition-all duration-300 z-20">
+<button class="w-full bg-primary text-black font-headline-lg-mobile text-[20px] py-3 uppercase tracking-wider hover:bg-[#ffcba5] transition-colors">
+                                QUICK ADD
+                            </button>
+</div>
+</div>
+<div class="p-4 flex flex-col gap-2 bg-surface-container/60 text-white border-t border-secondary/15 flex-grow justify-between">
+<h3 class="font-headline-lg-mobile text-[22px] uppercase leading-none truncate" title="Minimal Cargo">Minimal Cargo</h3>
+<p class="font-label-mono text-label-mono text-secondary">₹3,999</p>
+</div>
+</article>
+
+<!-- Product 12 -->
+<article class="group product-card-group flex flex-col bg-surface-container/30 relative border-b-2 border-transparent hover:border-primary transition-colors duration-300">
+<div class="relative w-full aspect-[0.75] overflow-hidden bg-black/40 image-container-clickable cursor-zoom-in">
+
+<img alt="Contrast Pocket Cargo" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500" src="./assets/PD12.png"/>
+<!-- Quick Add Overlay -->
+<div class="quick-add-overlay absolute inset-0 bg-black/40 flex items-end p-4 opacity-0 transform translate-y-4 transition-all duration-300 z-20">
+<button class="w-full bg-primary text-black font-headline-lg-mobile text-[20px] py-3 uppercase tracking-wider hover:bg-[#ffcba5] transition-colors">
+                                QUICK ADD
+                            </button>
+</div>
+</div>
+<div class="p-4 flex flex-col gap-2 bg-surface-container/60 text-white border-t border-secondary/15 flex-grow justify-between">
+<h3 class="font-headline-lg-mobile text-[22px] uppercase leading-none truncate" title="Contrast Pocket Cargo">Contrast Pocket Cargo</h3>
+<p class="font-label-mono text-label-mono text-secondary">₹4,699</p>
+</div>
+</article>
+
+<!-- Product 13 -->
+<article class="group product-card-group flex flex-col bg-surface-container/30 relative border-b-2 border-transparent hover:border-primary transition-colors duration-300">
+<div class="relative w-full aspect-[0.75] overflow-hidden bg-black/40 image-container-clickable cursor-zoom-in">
+<div class="absolute top-4 left-4 z-10 bg-black text-white px-3 py-1 font-label-mono text-label-mono uppercase tracking-widest">NEW</div>
+<img alt="Utility Tech Cargo" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500" src="./assets/PD13.png"/>
+<!-- Quick Add Overlay -->
+<div class="quick-add-overlay absolute inset-0 bg-black/40 flex items-end p-4 opacity-0 transform translate-y-4 transition-all duration-300 z-20">
+<button class="w-full bg-primary text-black font-headline-lg-mobile text-[20px] py-3 uppercase tracking-wider hover:bg-[#ffcba5] transition-colors">
+                                QUICK ADD
+                            </button>
+</div>
+</div>
+<div class="p-4 flex flex-col gap-2 bg-surface-container/60 text-white border-t border-secondary/15 flex-grow justify-between">
+<h3 class="font-headline-lg-mobile text-[22px] uppercase leading-none truncate" title="Utility Tech Cargo">Utility Tech Cargo</h3>
+<p class="font-label-mono text-label-mono text-secondary">₹5,499</p>
+</div>
+</article>
+
+<!-- Product 14 -->
+<article class="group product-card-group flex flex-col bg-surface-container/30 relative border-b-2 border-transparent hover:border-primary transition-colors duration-300">
+<div class="relative w-full aspect-[0.75] overflow-hidden bg-black/40 image-container-clickable cursor-zoom-in">
+
+<img alt="Denim Cargo" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500" src="./assets/PD14.png"/>
+<!-- Quick Add Overlay -->
+<div class="quick-add-overlay absolute inset-0 bg-black/40 flex items-end p-4 opacity-0 transform translate-y-4 transition-all duration-300 z-20">
+<button class="w-full bg-primary text-black font-headline-lg-mobile text-[20px] py-3 uppercase tracking-wider hover:bg-[#ffcba5] transition-colors">
+                                QUICK ADD
+                            </button>
+</div>
+</div>
+<div class="p-4 flex flex-col gap-2 bg-surface-container/60 text-white border-t border-secondary/15 flex-grow justify-between">
+<h3 class="font-headline-lg-mobile text-[22px] uppercase leading-none truncate" title="Denim Cargo">Denim Cargo</h3>
+<p class="font-label-mono text-label-mono text-secondary">₹4,299</p>
+</div>
+</article>
+
+<!-- Product 15 -->
+<article class="group product-card-group flex flex-col bg-surface-container/30 relative border-b-2 border-transparent hover:border-primary transition-colors duration-300">
+<div class="relative w-full aspect-[0.75] overflow-hidden bg-black/40 image-container-clickable cursor-zoom-in">
+
+<img alt="Candy Tech Cargo" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500" src="./assets/PD15.png"/>
+<!-- Quick Add Overlay -->
+<div class="quick-add-overlay absolute inset-0 bg-black/40 flex items-end p-4 opacity-0 transform translate-y-4 transition-all duration-300 z-20">
+<button class="w-full bg-primary text-black font-headline-lg-mobile text-[20px] py-3 uppercase tracking-wider hover:bg-[#ffcba5] transition-colors">
+                                QUICK ADD
+                            </button>
+</div>
+</div>
+<div class="p-4 flex flex-col gap-2 bg-surface-container/60 text-white border-t border-secondary/15 flex-grow justify-between">
+<h3 class="font-headline-lg-mobile text-[22px] uppercase leading-none truncate" title="Candy Tech Cargo">Candy Tech Cargo</h3>
+<p class="font-label-mono text-label-mono text-secondary">₹4,599</p>
+</div>
+</article>
+
+<!-- Product 16 -->
+<article class="group product-card-group flex flex-col bg-surface-container/30 relative border-b-2 border-transparent hover:border-primary transition-colors duration-300">
+<div class="relative w-full aspect-[0.75] overflow-hidden bg-black/40 image-container-clickable cursor-zoom-in">
+<div class="absolute top-4 left-4 z-10 bg-black text-white px-3 py-1 font-label-mono text-label-mono uppercase tracking-widest">NEW</div>
+<img alt="Acid Wash Denim Cargo" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500" src="./assets/PD16.png"/>
+<!-- Quick Add Overlay -->
+<div class="quick-add-overlay absolute inset-0 bg-black/40 flex items-end p-4 opacity-0 transform translate-y-4 transition-all duration-300 z-20">
+<button class="w-full bg-primary text-black font-headline-lg-mobile text-[20px] py-3 uppercase tracking-wider hover:bg-[#ffcba5] transition-colors">
+                                QUICK ADD
+                            </button>
+</div>
+</div>
+<div class="p-4 flex flex-col gap-2 bg-surface-container/60 text-white border-t border-secondary/15 flex-grow justify-between">
+<h3 class="font-headline-lg-mobile text-[22px] uppercase leading-none truncate" title="Acid Wash Denim Cargo">Acid Wash Denim Cargo</h3>
+<p class="font-label-mono text-label-mono text-secondary">₹5,199</p>
+</div>
+</article>
+
+<!-- Product 17 -->
+<article class="group product-card-group flex flex-col bg-surface-container/30 relative border-b-2 border-transparent hover:border-primary transition-colors duration-300">
+<div class="relative w-full aspect-[0.75] overflow-hidden bg-black/40 image-container-clickable cursor-zoom-in">
+<div class="absolute top-4 left-4 z-10 bg-black text-white px-3 py-1 font-label-mono text-label-mono uppercase tracking-widest">NEW</div>
+<img alt="Vibrant Utility Jogger" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500" src="./assets/PD17.png"/>
+<!-- Quick Add Overlay -->
+<div class="quick-add-overlay absolute inset-0 bg-black/40 flex items-end p-4 opacity-0 transform translate-y-4 transition-all duration-300 z-20">
+<button class="w-full bg-primary text-black font-headline-lg-mobile text-[20px] py-3 uppercase tracking-wider hover:bg-[#ffcba5] transition-colors">
+                                QUICK ADD
+                            </button>
+</div>
+</div>
+<div class="p-4 flex flex-col gap-2 bg-surface-container/60 text-white border-t border-secondary/15 flex-grow justify-between">
+<h3 class="font-headline-lg-mobile text-[22px] uppercase leading-none truncate" title="Vibrant Utility Jogger">Vibrant Utility Jogger</h3>
+<p class="font-label-mono text-label-mono text-secondary">₹4,899</p>
+</div>
+</article>
+
+<!-- Product 18 -->
+<article class="group product-card-group flex flex-col bg-surface-container/30 relative border-b-2 border-transparent hover:border-primary transition-colors duration-300">
+<div class="relative w-full aspect-[0.75] overflow-hidden bg-black/40 image-container-clickable cursor-zoom-in">
+
+<img alt="Haze Fleece Cargo" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500" src="./assets/PD18.png"/>
+<!-- Quick Add Overlay -->
+<div class="quick-add-overlay absolute inset-0 bg-black/40 flex items-end p-4 opacity-0 transform translate-y-4 transition-all duration-300 z-20">
+<button class="w-full bg-primary text-black font-headline-lg-mobile text-[20px] py-3 uppercase tracking-wider hover:bg-[#ffcba5] transition-colors">
+                                QUICK ADD
+                            </button>
+</div>
+</div>
+<div class="p-4 flex flex-col gap-2 bg-surface-container/60 text-white border-t border-secondary/15 flex-grow justify-between">
+<h3 class="font-headline-lg-mobile text-[22px] uppercase leading-none truncate" title="Haze Fleece Cargo">Haze Fleece Cargo</h3>
+<p class="font-label-mono text-label-mono text-secondary">₹4,299</p>
+</div>
+</article>
+
+<!-- Product 19 -->
+<article class="group product-card-group flex flex-col bg-surface-container/30 relative border-b-2 border-transparent hover:border-primary transition-colors duration-300">
+<div class="relative w-full aspect-[0.75] overflow-hidden bg-black/40 image-container-clickable cursor-zoom-in">
+
+<img alt="Paratrooper Cargo" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500" src="./assets/PD19.png"/>
+<!-- Quick Add Overlay -->
+<div class="quick-add-overlay absolute inset-0 bg-black/40 flex items-end p-4 opacity-0 transform translate-y-4 transition-all duration-300 z-20">
+<button class="w-full bg-primary text-black font-headline-lg-mobile text-[20px] py-3 uppercase tracking-wider hover:bg-[#ffcba5] transition-colors">
+                                QUICK ADD
+                            </button>
+</div>
+</div>
+<div class="p-4 flex flex-col gap-2 bg-surface-container/60 text-white border-t border-secondary/15 flex-grow justify-between">
+<h3 class="font-headline-lg-mobile text-[22px] uppercase leading-none truncate" title="Paratrooper Cargo">Paratrooper Cargo</h3>
+<p class="font-label-mono text-label-mono text-secondary">₹5,499</p>
+</div>
+</article>
+
+<!-- Product 20 -->
+<article class="group product-card-group flex flex-col bg-surface-container/30 relative border-b-2 border-transparent hover:border-primary transition-colors duration-300">
+<div class="relative w-full aspect-[0.75] overflow-hidden bg-black/40 image-container-clickable cursor-zoom-in">
+
+<img alt="Arctic Utility Pants" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500" src="./assets/PD20.png"/>
+<!-- Quick Add Overlay -->
+<div class="quick-add-overlay absolute inset-0 bg-black/40 flex items-end p-4 opacity-0 transform translate-y-4 transition-all duration-300 z-20">
+<button class="w-full bg-primary text-black font-headline-lg-mobile text-[20px] py-3 uppercase tracking-wider hover:bg-[#ffcba5] transition-colors">
+                                QUICK ADD
+                            </button>
+</div>
+</div>
+<div class="p-4 flex flex-col gap-2 bg-surface-container/60 text-white border-t border-secondary/15 flex-grow justify-between">
+<h3 class="font-headline-lg-mobile text-[22px] uppercase leading-none truncate" title="Arctic Utility Pants">Arctic Utility Pants</h3>
+<p class="font-label-mono text-label-mono text-secondary">₹5,299</p>
+</div>
+</article>
+
+<!-- Product 21 -->
+<article class="group product-card-group flex flex-col bg-surface-container/30 relative border-b-2 border-transparent hover:border-primary transition-colors duration-300">
+<div class="relative w-full aspect-[0.75] overflow-hidden bg-black/40 image-container-clickable cursor-zoom-in">
+<div class="absolute top-4 left-4 z-10 bg-black text-white px-3 py-1 font-label-mono text-label-mono uppercase tracking-widest">NEW</div>
+<img alt="Urban Explorer Cargo" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500" src="./assets/PD21.png"/>
+<!-- Quick Add Overlay -->
+<div class="quick-add-overlay absolute inset-0 bg-black/40 flex items-end p-4 opacity-0 transform translate-y-4 transition-all duration-300 z-20">
+<button class="w-full bg-primary text-black font-headline-lg-mobile text-[20px] py-3 uppercase tracking-wider hover:bg-[#ffcba5] transition-colors">
+                                QUICK ADD
+                            </button>
+</div>
+</div>
+<div class="p-4 flex flex-col gap-2 bg-surface-container/60 text-white border-t border-secondary/15 flex-grow justify-between">
+<h3 class="font-headline-lg-mobile text-[22px] uppercase leading-none truncate" title="Urban Explorer Cargo">Urban Explorer Cargo</h3>
+<p class="font-label-mono text-label-mono text-secondary">₹4,799</p>
+</div>
+</article>
+
+<!-- Product 22 -->
+<article class="group product-card-group flex flex-col bg-surface-container/30 relative border-b-2 border-transparent hover:border-primary transition-colors duration-300">
+<div class="relative w-full aspect-[0.75] overflow-hidden bg-black/40 image-container-clickable cursor-zoom-in">
+
+<img alt="Matrix Techwear Cargo" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500" src="./assets/PD22.png"/>
+<!-- Quick Add Overlay -->
+<div class="quick-add-overlay absolute inset-0 bg-black/40 flex items-end p-4 opacity-0 transform translate-y-4 transition-all duration-300 z-20">
+<button class="w-full bg-primary text-black font-headline-lg-mobile text-[20px] py-3 uppercase tracking-wider hover:bg-[#ffcba5] transition-colors">
+                                QUICK ADD
+                            </button>
+</div>
+</div>
+<div class="p-4 flex flex-col gap-2 bg-surface-container/60 text-white border-t border-secondary/15 flex-grow justify-between">
+<h3 class="font-headline-lg-mobile text-[22px] uppercase leading-none truncate" title="Matrix Techwear Cargo">Matrix Techwear Cargo</h3>
+<p class="font-label-mono text-label-mono text-secondary">₹5,899</p>
+</div>
+</article>
+
+<!-- Product 23 -->
+<article class="group product-card-group flex flex-col bg-surface-container/30 relative border-b-2 border-transparent hover:border-primary transition-colors duration-300">
+<div class="relative w-full aspect-[0.75] overflow-hidden bg-black/40 image-container-clickable cursor-zoom-in">
+
+<img alt="Nomad Patchwork Cargo" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500" src="./assets/PD23.png"/>
+<!-- Quick Add Overlay -->
+<div class="quick-add-overlay absolute inset-0 bg-black/40 flex items-end p-4 opacity-0 transform translate-y-4 transition-all duration-300 z-20">
+<button class="w-full bg-primary text-black font-headline-lg-mobile text-[20px] py-3 uppercase tracking-wider hover:bg-[#ffcba5] transition-colors">
+                                QUICK ADD
+                            </button>
+</div>
+</div>
+<div class="p-4 flex flex-col gap-2 bg-surface-container/60 text-white border-t border-secondary/15 flex-grow justify-between">
+<h3 class="font-headline-lg-mobile text-[22px] uppercase leading-none truncate" title="Nomad Patchwork Cargo">Nomad Patchwork Cargo</h3>
+<p class="font-label-mono text-label-mono text-secondary">₹4,999</p>
+</div>
+</article>
+
+<!-- Product 24 -->
+<article class="group product-card-group flex flex-col bg-surface-container/30 relative border-b-2 border-transparent hover:border-primary transition-colors duration-300">
+<div class="relative w-full aspect-[0.75] overflow-hidden bg-black/40 image-container-clickable cursor-zoom-in">
+
+<img alt="Concrete Minimalist Cargo" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500" src="./assets/PD24.png"/>
+<!-- Quick Add Overlay -->
+<div class="quick-add-overlay absolute inset-0 bg-black/40 flex items-end p-4 opacity-0 transform translate-y-4 transition-all duration-300 z-20">
+<button class="w-full bg-primary text-black font-headline-lg-mobile text-[20px] py-3 uppercase tracking-wider hover:bg-[#ffcba5] transition-colors">
+                                QUICK ADD
+                            </button>
+</div>
+</div>
+<div class="p-4 flex flex-col gap-2 bg-surface-container/60 text-white border-t border-secondary/15 flex-grow justify-between">
+<h3 class="font-headline-lg-mobile text-[22px] uppercase leading-none truncate" title="Concrete Minimalist Cargo">Concrete Minimalist Cargo</h3>
+<p class="font-label-mono text-label-mono text-secondary">₹4,499</p>
+</div>
+</article>
+
+<!-- Product 25 -->
+<article class="group product-card-group flex flex-col bg-surface-container/30 relative border-b-2 border-transparent hover:border-primary transition-colors duration-300">
+<div class="relative w-full aspect-[0.75] overflow-hidden bg-black/40 image-container-clickable cursor-zoom-in">
+<div class="absolute top-4 left-4 z-10 bg-black text-white px-3 py-1 font-label-mono text-label-mono uppercase tracking-widest">NEW</div>
+<img alt="Burgundy Heavy-Duty Cargo" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500" src="./assets/PD25.png"/>
+<!-- Quick Add Overlay -->
+<div class="quick-add-overlay absolute inset-0 bg-black/40 flex items-end p-4 opacity-0 transform translate-y-4 transition-all duration-300 z-20">
+<button class="w-full bg-primary text-black font-headline-lg-mobile text-[20px] py-3 uppercase tracking-wider hover:bg-[#ffcba5] transition-colors">
+                                QUICK ADD
+                            </button>
+</div>
+</div>
+<div class="p-4 flex flex-col gap-2 bg-surface-container/60 text-white border-t border-secondary/15 flex-grow justify-between">
+<h3 class="font-headline-lg-mobile text-[22px] uppercase leading-none truncate" title="Burgundy Heavy-Duty Cargo">Burgundy Heavy-Duty Cargo</h3>
+<p class="font-label-mono text-label-mono text-secondary">₹5,699</p>
+</div>
+</article>
+
+<!-- Product 26 -->
+<article class="group product-card-group flex flex-col bg-surface-container/30 relative border-b-2 border-transparent hover:border-primary transition-colors duration-300">
+<div class="relative w-full aspect-[0.75] overflow-hidden bg-black/40 image-container-clickable cursor-zoom-in">
+
+<img alt="Camo Tech Jogger" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500" src="./assets/PD26.png"/>
+<!-- Quick Add Overlay -->
+<div class="quick-add-overlay absolute inset-0 bg-black/40 flex items-end p-4 opacity-0 transform translate-y-4 transition-all duration-300 z-20">
+<button class="w-full bg-primary text-black font-headline-lg-mobile text-[20px] py-3 uppercase tracking-wider hover:bg-[#ffcba5] transition-colors">
+                                QUICK ADD
+                            </button>
+</div>
+</div>
+<div class="p-4 flex flex-col gap-2 bg-surface-container/60 text-white border-t border-secondary/15 flex-grow justify-between">
+<h3 class="font-headline-lg-mobile text-[22px] uppercase leading-none truncate" title="Camo Tech Jogger">Camo Tech Jogger</h3>
+<p class="font-label-mono text-label-mono text-secondary">₹4,899</p>
+</div>
+</article>
+
+<!-- Product 27 -->
+<article class="group product-card-group flex flex-col bg-surface-container/30 relative border-b-2 border-transparent hover:border-primary transition-colors duration-300">
+<div class="relative w-full aspect-[0.75] overflow-hidden bg-black/40 image-container-clickable cursor-zoom-in">
+
+<img alt="Stone Utility Pants" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500" src="./assets/PD27.png"/>
+<!-- Quick Add Overlay -->
+<div class="quick-add-overlay absolute inset-0 bg-black/40 flex items-end p-4 opacity-0 transform translate-y-4 transition-all duration-300 z-20">
+<button class="w-full bg-primary text-black font-headline-lg-mobile text-[20px] py-3 uppercase tracking-wider hover:bg-[#ffcba5] transition-colors">
+                                QUICK ADD
+                            </button>
+</div>
+</div>
+<div class="p-4 flex flex-col gap-2 bg-surface-container/60 text-white border-t border-secondary/15 flex-grow justify-between">
+<h3 class="font-headline-lg-mobile text-[22px] uppercase leading-none truncate" title="Stone Utility Pants">Stone Utility Pants</h3>
+<p class="font-label-mono text-label-mono text-secondary">₹4,599</p>
+</div>
+</article>
+
+<!-- Product 28 -->
+<article class="group product-card-group flex flex-col bg-surface-container/30 relative border-b-2 border-transparent hover:border-primary transition-colors duration-300">
+<div class="relative w-full aspect-[0.75] overflow-hidden bg-black/40 image-container-clickable cursor-zoom-in">
+
+<img alt="Forest Outdoor Cargo" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500" src="./assets/PD28.png"/>
+<!-- Quick Add Overlay -->
+<div class="quick-add-overlay absolute inset-0 bg-black/40 flex items-end p-4 opacity-0 transform translate-y-4 transition-all duration-300 z-20">
+<button class="w-full bg-primary text-black font-headline-lg-mobile text-[20px] py-3 uppercase tracking-wider hover:bg-[#ffcba5] transition-colors">
+                                QUICK ADD
+                            </button>
+</div>
+</div>
+<div class="p-4 flex flex-col gap-2 bg-surface-container/60 text-white border-t border-secondary/15 flex-grow justify-between">
+<h3 class="font-headline-lg-mobile text-[22px] uppercase leading-none truncate" title="Forest Outdoor Cargo">Forest Outdoor Cargo</h3>
+<p class="font-label-mono text-label-mono text-secondary">₹5,099</p>
+</div>
+</article>
+
+<!-- Product 29 -->
+<article class="group product-card-group flex flex-col bg-surface-container/30 relative border-b-2 border-transparent hover:border-primary transition-colors duration-300">
+<div class="relative w-full aspect-[0.75] overflow-hidden bg-black/40 image-container-clickable cursor-zoom-in">
+<div class="absolute top-4 left-4 z-10 bg-black text-white px-3 py-1 font-label-mono text-label-mono uppercase tracking-widest">NEW</div>
+<img alt="Cyber-Tech Cargo" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500" src="./assets/PD29.png"/>
+<!-- Quick Add Overlay -->
+<div class="quick-add-overlay absolute inset-0 bg-black/40 flex items-end p-4 opacity-0 transform translate-y-4 transition-all duration-300 z-20">
+<button class="w-full bg-primary text-black font-headline-lg-mobile text-[20px] py-3 uppercase tracking-wider hover:bg-[#ffcba5] transition-colors">
+                                QUICK ADD
+                            </button>
+</div>
+</div>
+<div class="p-4 flex flex-col gap-2 bg-surface-container/60 text-white border-t border-secondary/15 flex-grow justify-between">
+<h3 class="font-headline-lg-mobile text-[22px] uppercase leading-none truncate" title="Cyber-Tech Cargo">Cyber-Tech Cargo</h3>
+<p class="font-label-mono text-label-mono text-secondary">₹5,999</p>
+</div>
+</article>
+
+<!-- Product 30 -->
+<article class="group product-card-group flex flex-col bg-surface-container/30 relative border-b-2 border-transparent hover:border-primary transition-colors duration-300">
+<div class="relative w-full aspect-[0.75] overflow-hidden bg-black/40 image-container-clickable cursor-zoom-in">
+
+<img alt="Khaki Desert Cargo" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500" src="./assets/PD30.png"/>
+<!-- Quick Add Overlay -->
+<div class="quick-add-overlay absolute inset-0 bg-black/40 flex items-end p-4 opacity-0 transform translate-y-4 transition-all duration-300 z-20">
+<button class="w-full bg-primary text-black font-headline-lg-mobile text-[20px] py-3 uppercase tracking-wider hover:bg-[#ffcba5] transition-colors">
+                                QUICK ADD
+                            </button>
+</div>
+</div>
+<div class="p-4 flex flex-col gap-2 bg-surface-container/60 text-white border-t border-secondary/15 flex-grow justify-between">
+<h3 class="font-headline-lg-mobile text-[22px] uppercase leading-none truncate" title="Khaki Desert Cargo">Khaki Desert Cargo</h3>
+<p class="font-label-mono text-label-mono text-secondary">₹4,799</p>
+</div>
+</article>
+
+<!-- Product 31 -->
+<article class="group product-card-group flex flex-col bg-surface-container/30 relative border-b-2 border-transparent hover:border-primary transition-colors duration-300">
+<div class="relative w-full aspect-[0.75] overflow-hidden bg-black/40 image-container-clickable cursor-zoom-in">
+
+<img alt="Lavender Utility Cargo" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500" src="./assets/PD31.png"/>
+<!-- Quick Add Overlay -->
+<div class="quick-add-overlay absolute inset-0 bg-black/40 flex items-end p-4 opacity-0 transform translate-y-4 transition-all duration-300 z-20">
+<button class="w-full bg-primary text-black font-headline-lg-mobile text-[20px] py-3 uppercase tracking-wider hover:bg-[#ffcba5] transition-colors">
+                                QUICK ADD
+                            </button>
+</div>
+</div>
+<div class="p-4 flex flex-col gap-2 bg-surface-container/60 text-white border-t border-secondary/15 flex-grow justify-between">
+<h3 class="font-headline-lg-mobile text-[22px] uppercase leading-none truncate" title="Lavender Utility Cargo">Lavender Utility Cargo</h3>
+<p class="font-label-mono text-label-mono text-secondary">₹4,999</p>
+</div>
+</article>
+
+<!-- Product 32 -->
+<article class="group product-card-group flex flex-col bg-surface-container/30 relative border-b-2 border-transparent hover:border-primary transition-colors duration-300">
+<div class="relative w-full aspect-[0.75] overflow-hidden bg-black/40 image-container-clickable cursor-zoom-in">
+
+<img alt="Cobalt Denim-Look Jogger" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500" src="./assets/PD32.png"/>
+<!-- Quick Add Overlay -->
+<div class="quick-add-overlay absolute inset-0 bg-black/40 flex items-end p-4 opacity-0 transform translate-y-4 transition-all duration-300 z-20">
+<button class="w-full bg-primary text-black font-headline-lg-mobile text-[20px] py-3 uppercase tracking-wider hover:bg-[#ffcba5] transition-colors">
+                                QUICK ADD
+                            </button>
+</div>
+</div>
+<div class="p-4 flex flex-col gap-2 bg-surface-container/60 text-white border-t border-secondary/15 flex-grow justify-between">
+<h3 class="font-headline-lg-mobile text-[22px] uppercase leading-none truncate" title="Cobalt Denim-Look Jogger">Cobalt Denim-Look Jogger</h3>
+<p class="font-label-mono text-label-mono text-secondary">₹5,199</p>
+</div>
+</article>
+
+<!-- Product 33 -->
+<article class="group product-card-group flex flex-col bg-surface-container/30 relative border-b-2 border-transparent hover:border-primary transition-colors duration-300">
+<div class="relative w-full aspect-[0.75] overflow-hidden bg-black/40 image-container-clickable cursor-zoom-in">
+<div class="absolute top-4 left-4 z-10 bg-black text-white px-3 py-1 font-label-mono text-label-mono uppercase tracking-widest">NEW</div>
+<img alt="Shadow Cargo" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500" src="./assets/PD33.png"/>
+<!-- Quick Add Overlay -->
+<div class="quick-add-overlay absolute inset-0 bg-black/40 flex items-end p-4 opacity-0 transform translate-y-4 transition-all duration-300 z-20">
+<button class="w-full bg-primary text-black font-headline-lg-mobile text-[20px] py-3 uppercase tracking-wider hover:bg-[#ffcba5] transition-colors">
+                                QUICK ADD
+                            </button>
+</div>
+</div>
+<div class="p-4 flex flex-col gap-2 bg-surface-container/60 text-white border-t border-secondary/15 flex-grow justify-between">
+<h3 class="font-headline-lg-mobile text-[22px] uppercase leading-none truncate" title="Shadow Cargo">Shadow Cargo</h3>
+<p class="font-label-mono text-label-mono text-secondary">₹5,799</p>
+</div>
+</article>
+
+<!-- Product 34 -->
+<article class="group product-card-group flex flex-col bg-surface-container/30 relative border-b-2 border-transparent hover:border-primary transition-colors duration-300">
+<div class="relative w-full aspect-[0.75] overflow-hidden bg-black/40 image-container-clickable cursor-zoom-in">
+
+<img alt="Sahara Cargo" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500" src="./assets/PD34.png"/>
+<!-- Quick Add Overlay -->
+<div class="quick-add-overlay absolute inset-0 bg-black/40 flex items-end p-4 opacity-0 transform translate-y-4 transition-all duration-300 z-20">
+<button class="w-full bg-primary text-black font-headline-lg-mobile text-[20px] py-3 uppercase tracking-wider hover:bg-[#ffcba5] transition-colors">
+                                QUICK ADD
+                            </button>
+</div>
+</div>
+<div class="p-4 flex flex-col gap-2 bg-surface-container/60 text-white border-t border-secondary/15 flex-grow justify-between">
+<h3 class="font-headline-lg-mobile text-[22px] uppercase leading-none truncate" title="Sahara Cargo">Sahara Cargo</h3>
+<p class="font-label-mono text-label-mono text-secondary">₹4,699</p>
+</div>
+</article>
+
+<!-- Product 35 -->
+<article class="group product-card-group flex flex-col bg-surface-container/30 relative border-b-2 border-transparent hover:border-primary transition-colors duration-300">
+<div class="relative w-full aspect-[0.75] overflow-hidden bg-black/40 image-container-clickable cursor-zoom-in">
+
+<img alt="Rust Corduroy Cargo" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500" src="./assets/PD35.png"/>
+<!-- Quick Add Overlay -->
+<div class="quick-add-overlay absolute inset-0 bg-black/40 flex items-end p-4 opacity-0 transform translate-y-4 transition-all duration-300 z-20">
+<button class="w-full bg-primary text-black font-headline-lg-mobile text-[20px] py-3 uppercase tracking-wider hover:bg-[#ffcba5] transition-colors">
+                                QUICK ADD
+                            </button>
+</div>
+</div>
+<div class="p-4 flex flex-col gap-2 bg-surface-container/60 text-white border-t border-secondary/15 flex-grow justify-between">
+<h3 class="font-headline-lg-mobile text-[22px] uppercase leading-none truncate" title="Rust Corduroy Cargo">Rust Corduroy Cargo</h3>
+<p class="font-label-mono text-label-mono text-secondary">₹5,499</p>
+</div>
+</article>
+
+<!-- Product 36 -->
+<article class="group product-card-group flex flex-col bg-surface-container/30 relative border-b-2 border-transparent hover:border-primary transition-colors duration-300">
+<div class="relative w-full aspect-[0.75] overflow-hidden bg-black/40 image-container-clickable cursor-zoom-in">
+
+<img alt="Tactical Cargo" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500" src="./assets/PD36.png"/>
+<!-- Quick Add Overlay -->
+<div class="quick-add-overlay absolute inset-0 bg-black/40 flex items-end p-4 opacity-0 transform translate-y-4 transition-all duration-300 z-20">
+<button class="w-full bg-primary text-black font-headline-lg-mobile text-[20px] py-3 uppercase tracking-wider hover:bg-[#ffcba5] transition-colors">
+                                QUICK ADD
+                            </button>
+</div>
+</div>
+<div class="p-4 flex flex-col gap-2 bg-surface-container/60 text-white border-t border-secondary/15 flex-grow justify-between">
+<h3 class="font-headline-lg-mobile text-[22px] uppercase leading-none truncate" title="Tactical Cargo">Tactical Cargo</h3>
+<p class="font-label-mono text-label-mono text-secondary">₹5,999</p>
+</div>
+</article>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-black border-t border-secondary/15 w-full mt-auto">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-margin-desktop py-12 w-full max-w-container-max mx-auto gap-8">
+<div class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface uppercase tracking-tighter">
+                BTC LONDON
+            </div>
+<ul class="flex flex-wrap justify-center gap-6 font-label-mono text-label-mono text-on-surface-variant">
+<li><a class="hover:text-primary transition-all focus:underline" href="#">PRIVACY</a></li>
+<li><a class="hover:text-primary transition-all focus:underline" href="#">TERMS</a></li>
+<li><a class="hover:text-primary transition-all focus:underline" href="#">SHIPPING</a></li>
+<li><a class="hover:text-primary transition-all focus:underline" href="#">CONTACT</a></li>
+</ul>
+<div class="font-label-mono text-label-mono text-secondary text-center md:text-right">
+                © 2024 BTC LONDON. ALL RIGHTS RESERVED.
+            </div>
+</div>
+</footer>
+
+<!-- Lightbox Modal -->
+<div id="image-modal" class="fixed inset-0 z-[100] hidden bg-black/95 backdrop-blur-md flex items-center justify-center p-4">
+<button id="modal-close" class="absolute top-6 right-6 text-white/70 hover:text-white transition-colors focus:outline-none" aria-label="Close modal">
+<span class="material-symbols-outlined text-[40px]">close</span>
+</button>
+<div class="max-w-4xl max-h-[85vh] w-full flex items-center justify-center p-2 relative bg-black/30 border border-secondary/15">
+<img id="modal-img" class="max-w-full max-h-[80vh] object-contain" src="" alt=""/>
+</div>
+</div>
+
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const nav = document.getElementById('top-nav');
+            window.addEventListener('scroll', () => {
+                if (nav) {
+                    if (window.scrollY > 50) {
+                        nav.classList.add('bg-black/95', 'backdrop-blur-md', 'shadow-sm');
+                    } else {
+                        nav.classList.remove('bg-black/95', 'backdrop-blur-md', 'shadow-sm');
+                    }
+                }
+            });
+
+            // Mobile Menu Toggle
+            const toggleBtn = document.getElementById('mobile-menu-toggle');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuIcon = document.getElementById('menu-icon');
+
+            if (toggleBtn && mobileMenu && menuIcon) {
+                toggleBtn.addEventListener('click', () => {
+                    const isOpen = !mobileMenu.classList.contains('hidden');
+                    if (isOpen) {
+                        mobileMenu.classList.add('hidden');
+                        menuIcon.textContent = 'menu';
+                    } else {
+                        mobileMenu.classList.remove('hidden');
+                        menuIcon.textContent = 'close';
+                    }
+                });
+            }
+
+            // Image Popup Modal - click handler targeting container, filtering out QUICK ADD button clicks
+            const imageModal = document.getElementById('image-modal');
+            const modalImg = document.getElementById('modal-img');
+            const modalClose = document.getElementById('modal-close');
+
+            const clickables = document.querySelectorAll('.image-container-clickable');
+            clickables.forEach(container => {
+                container.addEventListener('click', (e) => {
+                    // Check if click was on or inside the QUICK ADD button
+                    if (e.target.closest('button')) {
+                        return;
+                    }
+                    e.preventDefault();
+                    const img = container.querySelector('img');
+                    if (imageModal && modalImg && img) {
+                        modalImg.src = img.src;
+                        modalImg.alt = img.alt;
+                        imageModal.classList.remove('hidden');
+                        document.body.style.overflow = 'hidden';
+                    }
+                });
+            });
+
+            const closeModal = () => {
+                if (imageModal) {
+                    imageModal.classList.add('hidden');
+                    document.body.style.overflow = '';
+                }
+            };
+
+            if (modalClose) {
+                modalClose.addEventListener('click', closeModal);
+            }
+            if (imageModal) {
+                imageModal.addEventListener('click', (e) => {
+                    if (e.target === imageModal) {
+                        closeModal();
+                    }
+                });
+            }
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') {
+                    closeModal();
+                }
+            });
+        });
+    </script>
+</body></html>
