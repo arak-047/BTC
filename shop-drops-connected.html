@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>BTC LONDON - THE COLLECTION</title>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&amp;family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed-variant": "#454744",
+                        "on-surface": "#e2e2e2",
+                        "on-primary-fixed": "#351000",
+                        "surface": "#131313",
+                        "surface-container-lowest": "#0e0e0e",
+                        "surface-bright": "#393939",
+                        "inverse-on-surface": "#303030",
+                        "outline-variant": "#5a4136",
+                        "background": "#131313",
+                        "surface-variant": "#353535",
+                        "on-tertiary": "#2f312e",
+                        "on-tertiary-container": "#2f312e",
+                        "on-surface-variant": "#e2bfb0",
+                        "secondary": "#e9c176",
+                        "tertiary-fixed-dim": "#c6c7c2",
+                        "secondary-fixed": "#ffdea5",
+                        "error": "#ffb4ab",
+                        "primary-fixed": "#ffdbcc",
+                        "on-secondary-fixed": "#261900",
+                        "on-primary-container": "#571f00",
+                        "error-container": "#93000a",
+                        "tertiary-container": "#989995",
+                        "surface-container": "#1f1f1f",
+                        "primary": "#ffb694",
+                        "surface-container-highest": "#353535",
+                        "primary-container": "#ff6a00",
+                        "inverse-surface": "#e2e2e2",
+                        "on-secondary-container": "#dab36a",
+                        "on-error-container": "#ffdad6",
+                        "tertiary": "#c6c7c2",
+                        "primary-fixed-dim": "#ffb694",
+                        "surface-tint": "#ffb694",
+                        "inverse-primary": "#a14000",
+                        "surface-container-low": "#1b1b1b",
+                        "on-background": "#e2e2e2",
+                        "outline": "#a98a7d",
+                        "on-primary-fixed-variant": "#7b2f00",
+                        "on-error": "#690005",
+                        "secondary-fixed-dim": "#e9c176",
+                        "secondary-container": "#604403",
+                        "on-secondary-fixed-variant": "#5d4201",
+                        "on-tertiary-fixed": "#1a1c19",
+                        "tertiary-fixed": "#e3e3de",
+                        "surface-dim": "#131313",
+                        "on-primary": "#571f00",
+                        "surface-container-high": "#2a2a2a",
+                        "on-secondary": "#412d00"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-desktop": "64px",
+                        "gutter": "24px",
+                        "container-max": "1440px",
+                        "base": "8px",
+                        "margin-mobile": "16px",
+                        "section-gap": "128px"
+                    },
+                    "fontFamily": {
+                        "headline-lg-mobile": ["Anton"],
+                        "subheading-md": ["Archivo Narrow"],
+                        "body-lg": ["Archivo Narrow"],
+                        "body-md": ["Archivo Narrow"],
+                        "label-mono": ["Space Mono"],
+                        "headline-lg": ["Anton"],
+                        "display-xl": ["Anton"]
+                    },
+                    "fontSize": {
+                        "headline-lg-mobile": ["36px", { "lineHeight": "40px", "letterSpacing": "0.02em", "fontWeight": "400" }],
+                        "subheading-md": ["20px", { "lineHeight": "28px", "letterSpacing": "0.1em", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "26px", "letterSpacing": "0.01em", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "label-mono": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "400" }],
+                        "headline-lg": ["48px", { "lineHeight": "52px", "letterSpacing": "0.02em", "fontWeight": "400" }],
+                        "display-xl": ["84px", { "lineHeight": "84px", "letterSpacing": "0.05em", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .scrollbar-orange::-webkit-scrollbar {
+            width: 8px;
+        }
+        .scrollbar-orange::-webkit-scrollbar-track {
+            background: #131313;
+        }
+        .scrollbar-orange::-webkit-scrollbar-thumb {
+            background: #ff6a00;
+        }
+        body {
+            background-color: #131313;
+            color: #e2e2e2;
+        }
+    </style>
+</head>
+<body class="font-body-md antialiased scrollbar-orange min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-background dark:bg-background border-b border-secondary/20">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-base w-full max-w-container-max mx-auto h-[80px]">
+<!-- Navigation Links -->
+<nav class="hidden md:flex items-center space-x-8">
+<a class="text-on-surface-variant font-subheading-md text-subheading-md uppercase hover:text-primary transition-colors duration-300" href="#">SHOP DROPS</a>
+<a class="text-primary border-b-2 border-primary pb-1 font-subheading-md text-subheading-md uppercase opacity-80" href="#">CARGO FITS</a>
+<a class="text-on-surface-variant font-subheading-md text-subheading-md uppercase hover:text-primary transition-colors duration-300" href="#">ABOUT BTC</a>
+</nav>
+<!-- Brand Logo -->
+<a class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-background uppercase tracking-tighter hover:text-primary transition-colors duration-300" href="{{DATA:SCREEN:SCREEN_13}}">
+                BTC LONDON
+            </a>
+<!-- Actions -->
+<div class="flex items-center space-x-4 text-primary">
+<button class="hover:text-primary-container transition-colors duration-300">
+<span class="material-symbols-outlined text-3xl">shopping_cart</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-grow pt-[120px] px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full">
+<!-- Header Section -->
+<section class="mb-16 border-b border-secondary/20 pb-8">
+<h1 class="font-display-xl text-display-xl text-on-background uppercase mb-8">THE COLLECTION</h1>
+<!-- Filter Bar -->
+<div class="flex flex-wrap gap-4 font-label-mono text-label-mono">
+<button class="px-4 py-2 border-2 border-primary bg-primary/10 text-primary uppercase transition-colors">ALL STYLES</button>
+<button class="px-4 py-2 border border-secondary/20 text-on-surface-variant hover:text-on-background hover:border-secondary/50 uppercase transition-colors">AGE 4-6</button>
+<button class="px-4 py-2 border border-secondary/20 text-on-surface-variant hover:text-on-background hover:border-secondary/50 uppercase transition-colors">AGE 7-10</button>
+<button class="px-4 py-2 border border-secondary/20 text-on-surface-variant hover:text-on-background hover:border-secondary/50 uppercase transition-colors">AGE 11-16</button>
+</div>
+</section>
+<!-- Product Grid: JOGGERS | AGE 4-6 -->
+<section class="mb-section-gap">
+<h2 class="font-subheading-md text-subheading-md text-on-background border-b border-secondary/20 pb-4 mb-8 uppercase flex items-center justify-between">
+<span>JOGGERS | AGE 4-6</span>
+<span class="text-secondary font-label-mono text-label-mono">10 DESIGNS</span>
+</h2>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-gutter">
+<!-- Jogger 1 -->
+<div class="group relative bg-surface-container flex flex-col h-full border border-transparent hover:border-primary-container transition-all">
+<div class="relative aspect-square w-full bg-[#F5F5F0] overflow-hidden">
+<img alt="Neon yellow tech joggers with reflective 'AI Pocket' branding" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgaAu0VSbh3qi2Z-KU7ANQEsTbZqqggm7fhM0BOUNlFPOxyGO5BlJw1tS5UOvyrVz5k6x1P3qPG0w8m6qLiIBCD04cErlGwKSfp6x3rsZde1r6bCE9-qBKPG04V0YST_u8hIsEKyiGFLa6aUl7aTTYW6oyYuHnCQSu_gog_gyDaYN0QOeh0MGaGaVHngPp3BNONMpswapAHnrQ1-f3ZT_G5iluqI7QUmu1ZSRN6evjWxuCcr6LD6nJpWB-FOzo4AZ7P5VZMAkH6Zsz"/>
+<div class="absolute top-2 left-2 flex flex-col gap-2">
+<span class="bg-black text-white font-label-mono text-[10px] px-2 py-1 uppercase tracking-wider">NEW DROP</span>
+<div class="bg-primary-container text-black px-2 py-1 flex items-center gap-1 w-fit">
+<span class="material-symbols-outlined text-[14px]">memory</span>
+<span class="font-label-mono text-[10px] font-bold">AI POCKET</span>
+</div>
+</div>
+<div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
+<button class="bg-primary-container text-black font-headline-lg-mobile text-[24px] px-8 py-3 uppercase tracking-wider hover:bg-white hover:text-black transition-colors">QUICK ADD</button>
+</div>
+</div>
+<div class="p-4 flex flex-col flex-grow justify-between border-t border-secondary/20">
+<h3 class="font-headline-lg-mobile text-[20px] leading-tight text-on-surface uppercase mb-2">NEON TECH JOGGER</h3>
+<p class="font-label-mono text-secondary">₹ 4,500</p>
+</div>
+</div>
+<!-- Jogger 2 -->
+<div class="group relative bg-surface-container flex flex-col h-full border border-transparent hover:border-primary-container transition-all">
+<div class="relative aspect-square w-full bg-[#F5F5F0] overflow-hidden">
+<img alt="Soft cotton charcoal joggers with integrated tech-knit pockets" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgaAu0VSbh3qi2Z-KU7ANQEsTbZqqggm7fhM0BOUNlFPOxyGO5BlJw1tS5UOvyrVz5k6x1P3qPG0w8m6qLiIBCD04cErlGwKSfp6x3rsZde1r6bCE9-qBKPG04V0YST_u8hIsEKyiGFLa6aUl7aTTYW6oyYuHnCQSu_gog_gyDaYN0QOeh0MGaGaVHngPp3BNONMpswapAHnrQ1-f3ZT_G5iluqI7QUmu1ZSRN6evjWxuCcr6LD6nJpWB-FOzo4AZ7P5VZMAkH6Zsz"/>
+<div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
+<button class="bg-primary-container text-black font-headline-lg-mobile text-[24px] px-8 py-3 uppercase tracking-wider hover:bg-white hover:text-black transition-colors">QUICK ADD</button>
+</div>
+</div>
+<div class="p-4 flex flex-col flex-grow justify-between border-t border-secondary/20">
+<h3 class="font-headline-lg-mobile text-[20px] leading-tight text-on-surface uppercase mb-2">CHARCOAL KNIT JOGGER</h3>
+<p class="font-label-mono text-secondary">₹ 3,800</p>
+</div>
+</div>
+<!-- Jogger 3 -->
+<div class="group relative bg-surface-container flex flex-col h-full border border-transparent hover:border-primary-container transition-all">
+<div class="relative aspect-square w-full bg-[#F5F5F0] overflow-hidden">
+<img alt="Sage green utility joggers with magnetic closures" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgaAu0VSbh3qi2Z-KU7ANQEsTbZqqggm7fhM0BOUNlFPOxyGO5BlJw1tS5UOvyrVz5k6x1P3qPG0w8m6qLiIBCD04cErlGwKSfp6x3rsZde1r6bCE9-qBKPG04V0YST_u8hIsEKyiGFLa6aUl7aTTYW6oyYuHnCQSu_gog_gyDaYN0QOeh0MGaGaVHngPp3BNONMpswapAHnrQ1-f3ZT_G5iluqI7QUmu1ZSRN6evjWxuCcr6LD6nJpWB-FOzo4AZ7P5VZMAkH6Zsz"/>
+<div class="absolute top-2 left-2 flex flex-col gap-2">
+<div class="bg-primary-container text-black px-2 py-1 flex items-center gap-1 w-fit">
+<span class="material-symbols-outlined text-[14px]">memory</span>
+<span class="font-label-mono text-[10px] font-bold">AI POCKET</span>
+</div>
+</div>
+<div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
+<button class="bg-primary-container text-black font-headline-lg-mobile text-[24px] px-8 py-3 uppercase tracking-wider hover:bg-white hover:text-black transition-colors">QUICK ADD</button>
+</div>
+</div>
+<div class="p-4 flex flex-col flex-grow justify-between border-t border-secondary/20">
+<h3 class="font-headline-lg-mobile text-[20px] leading-tight text-on-surface uppercase mb-2">SAGE UTILITY JOGGER</h3>
+<p class="font-label-mono text-secondary">₹ 4,200</p>
+</div>
+</div>
+<!-- Jogger 4 -->
+<div class="group relative bg-surface-container flex flex-col h-full border border-transparent hover:border-primary-container transition-all">
+<div class="relative aspect-square w-full bg-[#F5F5F0] overflow-hidden">
+<img alt="Electric blue 'Cyber-Pulse' joggers with orange accents" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgaAu0VSbh3qi2Z-KU7ANQEsTbZqqggm7fhM0BOUNlFPOxyGO5BlJw1tS5UOvyrVz5k6x1P3qPG0w8m6qLiIBCD04cErlGwKSfp6x3rsZde1r6bCE9-qBKPG04V0YST_u8hIsEKyiGFLa6aUl7aTTYW6oyYuHnCQSu_gog_gyDaYN0QOeh0MGaGaVHngPp3BNONMpswapAHnrQ1-f3ZT_G5iluqI7QUmu1ZSRN6evjWxuCcr6LD6nJpWB-FOzo4AZ7P5VZMAkH6Zsz"/>
+<div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
+<button class="bg-primary-container text-black font-headline-lg-mobile text-[24px] px-8 py-3 uppercase tracking-wider hover:bg-white hover:text-black transition-colors">QUICK ADD</button>
+</div>
+</div>
+<div class="p-4 flex flex-col flex-grow justify-between border-t border-secondary/20">
+<h3 class="font-headline-lg-mobile text-[20px] leading-tight text-on-surface uppercase mb-2">CYBER-PULSE JOGGER</h3>
+<p class="font-label-mono text-secondary">₹ 4,800</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Product Grid: CARGOS | AGE 4-16 -->
+<section class="mb-section-gap">
+<h2 class="font-subheading-md text-subheading-md text-on-background border-b border-secondary/20 pb-4 mb-8 uppercase flex items-center justify-between">
+<span>CARGOS | AGE 4-16</span>
+<span class="text-secondary font-label-mono text-label-mono">30 STYLES</span>
+</h2>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-gutter">
+<!-- Cargo 1 -->
+<div class="group relative bg-surface-container flex flex-col h-full border border-transparent hover:border-primary-container transition-all md:col-span-2 md:row-span-2">
+<div class="relative aspect-[3/4] md:aspect-auto md:h-full w-full bg-[#F5F5F0] overflow-hidden">
+<img alt="Pink 'Candy Tech' cargos with white buckles" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AP1WRLvpzhejrRuGhHE4l0mP0J_R-VgDfp2MR2mnhd7D30JovKhfCehN3IDc-T-ITpJT-s8yGo8mvoUoxS_14UVbHVRLifcJojtm82Z2Jumt3zqgPzbgPMwNceEkYEOu_7oghiYEFzsVDaYRkbfn4DF1Z8BbZjbLvJmSeNSa2MeWxTpvODbc1WyvytYymCho8MXgt49fhmYf41Yh7LYJd9SbkQhud3LxRguxrecWKDnvgyfcMhLta7ld7DfXd9Cm"/>
+<div class="absolute top-4 left-4 flex flex-col gap-2">
+<span class="bg-black text-white font-label-mono text-xs px-3 py-1.5 uppercase tracking-wider">LIMITED EDITION</span>
+</div>
+<div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
+<button class="bg-primary-container text-black font-headline-lg-mobile text-[32px] px-10 py-4 uppercase tracking-wider hover:bg-white hover:text-black transition-colors">QUICK ADD</button>
+</div>
+</div>
+<div class="p-6 flex flex-col justify-end border-t border-secondary/20 bg-surface-container">
+<h3 class="font-headline-lg text-[36px] leading-tight text-on-surface uppercase mb-2">CANDY TECH CARGO</h3>
+<p class="font-label-mono text-secondary text-lg">₹ 6,500</p>
+</div>
+</div>
+<!-- Cargo 2 -->
+<div class="group relative bg-surface-container flex flex-col h-full border border-transparent hover:border-primary-container transition-all">
+<div class="relative aspect-[3/4] w-full bg-[#F5F5F0] overflow-hidden">
+<img alt="Denim Cargo in light blue wash" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AP1WRLsgLhKjhm-QZi-nFLDfBcwdbUxJcV24FSpEfYMd-i6-pfO5-3N1mdjgy6yM_weoLIySZ31R7VZNXM7VKMoOLjmgXqy2WTbJHpjSYzVNQNYwJSq6tgRCqMWW_V_yewR0pyx1bqDqftqbohyvcK8OOsl4ESjPx4qpCnzcSKx3H_VYgPeumj7L4jYlhqtYx9hbDr4e4mk2AsE009k1QY2h7sY7U69eIHy0-gWz5KfPhX2YAmZf7Del65Ge3K6S"/>
+<div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
+<button class="bg-primary-container text-black font-headline-lg-mobile text-[24px] px-8 py-3 uppercase tracking-wider hover:bg-white hover:text-black transition-colors">QUICK ADD</button>
+</div>
+</div>
+<div class="p-4 flex flex-col flex-grow justify-between border-t border-secondary/20">
+<h3 class="font-headline-lg-mobile text-[20px] leading-tight text-on-surface uppercase mb-2">RAW DENIM CARGO</h3>
+<p class="font-label-mono text-secondary">₹ 5,200</p>
+</div>
+</div>
+<!-- Cargo 3 -->
+<div class="group relative bg-surface-container flex flex-col h-full border border-transparent hover:border-primary-container transition-all">
+<div class="relative aspect-[3/4] w-full bg-[#F5F5F0] overflow-hidden">
+<img alt="Olive drab 'Paratrooper' cargos with elastic cuffs" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AP1WRLuTNqk4hFqOMUwzGKquIMTYBqTdhG8tvShgvFrQ2ffLm2VBUePaRdaX39ffGUnRuo9XZkEAnEQ1dqpXcUHW5dCBa2teE00mvql5HVRV4Y2ODl1QOA7up9p-SOOvxgcBBKm8jNGfStxZTn6dA6p1Zlkh_CwYNKuhm5YqS6Ti1xwURwNGkzB0OMQKDtBoNmiVU_SaJSmsrY6pQ8qEUcWGR3-z5DsfExb907ACFgiHg-WRUrFRn1k_UuGsjg3J"/>
+<div class="absolute top-2 left-2 flex flex-col gap-2">
+<div class="bg-primary-container text-black px-2 py-1 flex items-center gap-1 w-fit">
+<span class="material-symbols-outlined text-[14px]">memory</span>
+<span class="font-label-mono text-[10px] font-bold">AI POCKET</span>
+</div>
+</div>
+<div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
+<button class="bg-primary-container text-black font-headline-lg-mobile text-[24px] px-8 py-3 uppercase tracking-wider hover:bg-white hover:text-black transition-colors">QUICK ADD</button>
+</div>
+</div>
+<div class="p-4 flex flex-col flex-grow justify-between border-t border-secondary/20">
+<h3 class="font-headline-lg-mobile text-[20px] leading-tight text-on-surface uppercase mb-2">PARATROOPER CARGO</h3>
+<p class="font-label-mono text-secondary">₹ 5,800</p>
+</div>
+</div>
+<!-- Cargo 4 -->
+<div class="group relative bg-surface-container flex flex-col h-full border border-transparent hover:border-primary-container transition-all">
+<div class="relative aspect-[3/4] w-full bg-[#F5F5F0] overflow-hidden">
+<img alt="Deep burgundy heavy-duty cargos with black straps" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AP1WRLuvYoxUSI702t31wMydwRHXdvA0Xw3oJyjy0pAJhID5TrjOlTeW4cE9iL-Zkl32mjTVGIzOF4jrQcN5LRnjorJq7LERnx292kPFzazrcxHhVZWArtP5NLAT3EbZWcb7aMRhev7oiiSxVr0ZPcextl4adoGNAxNvNh8ulz21nnzhBbHmKGEAHv9BoRam7qOJKLKJQcOdT_oPWLWFNXTMTqfLpaS80yEb8CjhxC4DheRn7jIzqJKrWGm_Uf4"/>
+<div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
+<button class="bg-primary-container text-black font-headline-lg-mobile text-[24px] px-8 py-3 uppercase tracking-wider hover:bg-white hover:text-black transition-colors">QUICK ADD</button>
+</div>
+</div>
+<div class="p-4 flex flex-col flex-grow justify-between border-t border-secondary/20">
+<h3 class="font-headline-lg-mobile text-[20px] leading-tight text-on-surface uppercase mb-2">BURGUNDY STRAP CARGO</h3>
+<p class="font-label-mono text-secondary">₹ 6,100</p>
+</div>
+</div>
+<!-- Cargo 5 -->
+<div class="group relative bg-surface-container flex flex-col h-full border border-transparent hover:border-primary-container transition-all">
+<div class="relative aspect-[3/4] w-full bg-[#F5F5F0] overflow-hidden">
+<img alt="Lavender purple utility cargos with cream contrast pockets" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AP1WRLstYTH3sU_HBQJtQgDV1NEOfs7mbLcgS4aOymUQL5CNxoAuz5zTCFkxIJQ1lzxqq899gT4j-spea1DGczlZqIXO1dG-mm-RolreDSuH57XoJLC4ZMC-arV6cUqGMB1ZliHnmtBANKQ9yenuDtJ_6xguVquONrrexpha_rx2zug8X8dwZNyGhE2MVjitABA9p6OKLtyjc_HiKudDRzJsE9zSpqq244BMnV5T4_dnFH7ixrP06YCmK3AHTIG9"/>
+<div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
+<button class="bg-primary-container text-black font-headline-lg-mobile text-[24px] px-8 py-3 uppercase tracking-wider hover:bg-white hover:text-black transition-colors">QUICK ADD</button>
+</div>
+</div>
+<div class="p-4 flex flex-col flex-grow justify-between border-t border-secondary/20">
+<h3 class="font-headline-lg-mobile text-[20px] leading-tight text-on-surface uppercase mb-2">LAVENDER UTILITY CARGO</h3>
+<p class="font-label-mono text-secondary">₹ 5,500</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="mt-auto bg-surface dark:bg-surface border-t border-secondary/20 w-full">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-margin-desktop py-section-gap w-full max-w-container-max mx-auto">
+<!-- Brand -->
+<div class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-8 md:mb-0">
+                BTC LONDON
+            </div>
+<!-- Links -->
+<nav class="flex flex-wrap justify-center gap-6 mb-8 md:mb-0">
+<a class="font-label-mono text-label-mono text-on-surface-variant hover:text-primary transition-all focus:underline" href="#">PRIVACY</a>
+<a class="font-label-mono text-label-mono text-on-surface-variant hover:text-primary transition-all focus:underline" href="#">TERMS</a>
+<a class="font-label-mono text-label-mono text-on-surface-variant hover:text-primary transition-all focus:underline" href="#">SHIPPING</a>
+<a class="font-label-mono text-label-mono text-on-surface-variant hover:text-primary transition-all focus:underline" href="#">CONTACT</a>
+</nav>
+<!-- Copyright -->
+<div class="font-label-mono text-label-mono text-secondary text-center md:text-right">
+                © 2024 BTC LONDON. ALL RIGHTS RESERVED.
+            </div>
+</div>
+</footer>
+</body></html>

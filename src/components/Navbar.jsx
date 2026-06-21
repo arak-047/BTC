@@ -33,9 +33,10 @@ const Navbar = () => {
 
         {/* Desktop Links */}
         <div className={`navbar-links ${isMobileMenuOpen ? 'mobile-open' : ''}`}>
-          <a href="#shop" className="nav-link">Shop Drops</a>
+          <a href="shop-drops.html" className="nav-link">Shop Drops</a>
           <a href="#cargo" className="nav-link">Cargo Fits</a>
           <a href="#about" className="nav-link">About BTC</a>
+          <a href="ai-pocket.html" className="nav-link">AI Pocket</a>
         </div>
 
         {/* Cart Icon */}

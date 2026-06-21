@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>BTC LONDON | AI Pocket</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&amp;family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        
+        /* Custom scrollbar for webkit */
+        ::-webkit-scrollbar {
+            width: 4px;
+            height: 4px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #131313;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #ff6a00;
+            border-radius: 0;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #ffb694;
+        }
+    </style>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-tertiary-fixed-variant": "#454744",
+                        "on-surface": "#e2e2e2",
+                        "on-primary-fixed": "#351000",
+                        "surface": "#131313",
+                        "surface-container-lowest": "#0e0e0e",
+                        "surface-bright": "#393939",
+                        "inverse-on-surface": "#303030",
+                        "outline-variant": "#5a4136",
+                        "background": "#131313",
+                        "surface-variant": "#353535",
+                        "on-tertiary": "#2f312e",
+                        "on-tertiary-container": "#2f312e",
+                        "on-surface-variant": "#e2bfb0",
+                        "secondary": "#e9c176",
+                        "tertiary-fixed-dim": "#c6c7c2",
+                        "secondary-fixed": "#ffdea5",
+                        "error": "#ffb4ab",
+                        "primary-fixed": "#ffdbcc",
+                        "on-secondary-fixed": "#261900",
+                        "on-primary-container": "#571f00",
+                        "error-container": "#93000a",
+                        "tertiary-container": "#989995",
+                        "surface-container": "#1f1f1f",
+                        "primary": "#ffb694",
+                        "surface-container-highest": "#353535",
+                        "primary-container": "#ff6a00",
+                        "inverse-surface": "#e2e2e2",
+                        "on-secondary-container": "#dab36a",
+                        "on-error-container": "#ffdad6",
+                        "tertiary": "#c6c7c2",
+                        "primary-fixed-dim": "#ffb694",
+                        "surface-tint": "#ffb694",
+                        "inverse-primary": "#a14000",
+                        "surface-container-low": "#1b1b1b",
+                        "on-background": "#e2e2e2",
+                        "outline": "#a98a7d",
+                        "on-primary-fixed-variant": "#7b2f00",
+                        "on-error": "#690005",
+                        "secondary-fixed-dim": "#e9c176",
+                        "secondary-container": "#604403",
+                        "on-secondary-fixed-variant": "#5d4201",
+                        "on-tertiary-fixed": "#1a1c19",
+                        "tertiary-fixed": "#e3e3de",
+                        "surface-dim": "#131313",
+                        "on-primary": "#571f00",
+                        "surface-container-high": "#2a2a2a",
+                        "on-secondary": "#412d00"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    spacing: {
+                        "margin-desktop": "64px",
+                        "gutter": "24px",
+                        "container-max": "1440px",
+                        "base": "8px",
+                        "margin-mobile": "16px",
+                        "section-gap": "128px"
+                    },
+                    fontFamily: {
+                        "headline-lg-mobile": ["Anton"],
+                        "subheading-md": ["Archivo Narrow"],
+                        "body-lg": ["Archivo Narrow"],
+                        "body-md": ["Archivo Narrow"],
+                        "label-mono": ["Space Mono"],
+                        "headline-lg": ["Anton"],
+                        "display-xl": ["Anton"]
+                    },
+                    fontSize: {
+                        "headline-lg-mobile": ["36px", { lineHeight: "40px", letterSpacing: "0.02em", fontWeight: "400" }],
+                        "subheading-md": ["20px", { lineHeight: "28px", letterSpacing: "0.1em", fontWeight: "600" }],
+                        "body-lg": ["18px", { lineHeight: "26px", letterSpacing: "0.01em", fontWeight: "400" }],
+                        "body-md": ["16px", { lineHeight: "24px", fontWeight: "400" }],
+                        "label-mono": ["12px", { lineHeight: "16px", letterSpacing: "0.05em", fontWeight: "400" }],
+                        "headline-lg": ["48px", { lineHeight: "52px", letterSpacing: "0.02em", fontWeight: "400" }],
+                        "display-xl": ["84px", { lineHeight: "84px", letterSpacing: "0.05em", fontWeight: "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background min-h-screen overflow-x-hidden selection:bg-primary-container selection:text-black">
+<!-- TopNavBar component -->
+<nav class="fixed top-0 w-full z-50 bg-background dark:bg-background border-b border-secondary/20 transition-all duration-300" id="top-nav">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-base w-full max-w-container-max mx-auto h-20">
+<!-- Mobile Menu Toggle -->
+<button class="md:hidden text-on-background p-2" id="mobile-menu-toggle">
+<span class="material-symbols-outlined" id="menu-icon">menu</span>
+</button>
+<!-- Brand Logo -->
+<a class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-background uppercase tracking-tighter hover:text-primary transition-colors duration-300" href="index.html">
+                BTC LONDON
+            </a>
+<!-- Navigation Links (Web) -->
+<div class="hidden md:flex items-center space-x-gutter">
+<a class="text-on-surface-variant font-subheading-md text-subheading-md uppercase hover:text-primary transition-colors duration-300" href="shop-drops.html">
+                    SHOP DROPS
+                </a>
+<a class="text-on-surface-variant font-subheading-md text-subheading-md uppercase hover:text-primary transition-colors duration-300" href="index.html#cargo">
+                    CARGO FITS
+                </a>
+<a class="text-on-surface-variant font-subheading-md text-subheading-md uppercase hover:text-primary transition-colors duration-300" href="index.html#about">
+                    ABOUT BTC
+                </a>
+<a class="text-primary border-b-2 border-primary pb-1 font-subheading-md text-subheading-md uppercase hover:text-primary transition-colors duration-300 opacity-80" href="ai-pocket.html">
+                    AI POCKET
+                </a>
+</div>
+<!-- Trailing Icon Actions -->
+<div class="flex items-center">
+<button class="text-on-background hover:text-primary transition-colors duration-300 p-2">
+<span class="material-symbols-outlined">shopping_cart</span>
+</button>
+</div>
+</div>
+<!-- Mobile Menu Panel (Hidden by default) -->
+<div class="hidden md:hidden fixed inset-x-0 top-20 bg-background border-b border-secondary/20 flex flex-col items-center py-8 space-y-6 z-40" id="mobile-menu">
+<a class="text-on-surface-variant font-subheading-md text-subheading-md uppercase hover:text-primary transition-colors duration-300" href="shop-drops.html">
+                    SHOP DROPS
+                </a>
+<a class="text-on-surface-variant font-subheading-md text-subheading-md uppercase hover:text-primary transition-colors duration-300" href="index.html#cargo">
+                    CARGO FITS
+                </a>
+<a class="text-on-surface-variant font-subheading-md text-subheading-md uppercase hover:text-primary transition-colors duration-300" href="index.html#about">
+                    ABOUT BTC
+                </a>
+<a class="text-primary font-subheading-md text-subheading-md uppercase hover:text-primary transition-colors duration-300" href="ai-pocket.html">
+                    AI POCKET
+                </a>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative w-full h-[85vh] flex items-center justify-center border-b border-secondary/20">
+<div class="absolute inset-0 z-0 bg-surface-container-lowest">
+<img alt="Hero background" class="w-full h-full object-cover opacity-60" src="./heroimage-aipocket/screen.png"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent"></div>
+</div>
+<div class="relative z-10 flex flex-col items-center text-center px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full">
+<div class="inline-block bg-black px-4 py-1 mb-8 border border-secondary/20">
+<span class="font-label-mono text-label-mono text-white tracking-widest uppercase">SYSTEM ACTIVE // V.1.0</span>
+</div>
+<h1 class="font-display-xl text-headline-lg-mobile md:text-display-xl uppercase text-on-surface mb-6 drop-shadow-2xl max-w-4xl leading-tight">
+                    THE FUTURE IS IN <br class="hidden md:block"/><span class="text-primary-container">YOUR POCKET</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-12 max-w-2xl border-l-2 border-primary-container pl-4 text-left mx-auto">
+                    Introducing the AI POCKET technology. Smart-Sync integrated utility for the next generation.
+                </p>
+<a class="group relative inline-flex items-center justify-center bg-primary-container text-black font-headline-lg-mobile text-[24px] uppercase px-12 py-4 hover:bg-white transition-colors duration-300" href="#shop">
+<span class="relative z-10">SHOP THE CONCEPT</span>
+<span class="absolute inset-0 border-2 border-transparent group-hover:border-primary-container transition-colors duration-300 -m-1"></span>
+</a>
+</div>
+</section>
+<!-- Featured Trends Section -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop w-full max-w-container-max mx-auto border-b border-secondary/20" id="shop">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 border-b border-secondary/20 pb-4">
+<div>
+<span class="font-label-mono text-label-mono text-primary-container mb-2 block">MODULE 01</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase">TRENDING DROPS</h2>
+</div>
+<a class="hidden md:flex items-center font-label-mono text-label-mono text-on-surface-variant hover:text-primary-container transition-colors group" href="shop-drops.html">
+                    VIEW MANIFEST
+                    <span class="material-symbols-outlined ml-2 group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+<!-- Bento Grid Layout for Trends -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter auto-rows-[400px]">
+<!-- Main Feature (Utility Tech) -->
+<div class="md:col-span-6 bg-[#F5F5F0] relative group cursor-pointer overflow-hidden flex flex-col justify-end p-0 border border-secondary/20">
+<div class="absolute top-4 left-4 z-20 bg-black px-3 py-1">
+<span class="font-label-mono text-label-mono text-white">#01 HIGHEST UTILITY</span>
+</div>
+<img alt="Utility Tech" class="absolute inset-0 w-full h-[80%] object-cover object-top group-hover:scale-105 transition-transform duration-700" src="./screen4.png"/>
+<div class="relative z-10 bg-[#F5F5F0] p-6 border-t-2 border-primary-container translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+<div class="flex justify-between items-center">
+<h3 class="font-headline-lg-mobile text-[28px] uppercase text-black">Utility Tech Cargo</h3>
+<span class="font-label-mono text-label-mono text-black font-bold">£185</span>
+</div>
+</div>
+</div>
+<!-- Secondary Split -->
+<div class="md:col-span-6 grid grid-rows-2 gap-gutter h-full">
+<!-- Techwear Edge -->
+<div class="bg-[#F5F5F0] relative group cursor-pointer overflow-hidden flex items-end">
+<img alt="Techwear Edge" class="absolute inset-0 w-full h-[85%] object-cover object-top group-hover:scale-105 transition-transform duration-700" src="./screen5.png"/>
+<div class="relative z-10 w-full bg-[#F5F5F0]/95 backdrop-blur px-4 py-3 flex justify-between items-center border-t border-black/10">
+<h3 class="font-headline-lg-mobile text-[20px] uppercase text-black">Techwear Edge</h3>
+<span class="font-label-mono text-label-mono text-black">£160</span>
+</div>
+</div>
+<!-- Side-by-side small -->
+<div class="grid grid-cols-2 gap-gutter h-full">
+<!-- Zip & Patch -->
+<div class="bg-[#F5F5F0] relative group cursor-pointer overflow-hidden flex items-end border border-secondary/20">
+<img alt="Zip &amp; Patch" class="absolute inset-0 w-full h-[85%] object-cover object-top group-hover:scale-105 transition-transform duration-700" src="./screen6.png"/>
+<div class="absolute top-2 right-2 z-20 bg-primary-container px-2 py-0.5">
+<span class="font-label-mono text-[10px] text-black">LIMITED</span>
+</div>
+<div class="relative z-10 w-full bg-[#F5F5F0] px-3 py-2 flex flex-col border-t border-black/10">
+<h3 class="font-headline-lg-mobile text-[16px] uppercase text-black truncate">Zip &amp; Patch</h3>
+<span class="font-label-mono text-label-mono text-black">£190</span>
+</div>
+</div>
+<!-- Contrast Pocket -->
+<div class="bg-[#F5F5F0] relative group cursor-pointer overflow-hidden flex items-end border border-secondary/20">
+<img alt="Contrast Pocket" class="absolute inset-0 w-full h-[85%] object-cover object-top group-hover:scale-105 transition-transform duration-700" src="./screen2.png"/>
+<div class="relative z-10 w-full bg-[#F5F5F0] px-3 py-2 flex flex-col border-t border-black/10">
+<h3 class="font-headline-lg-mobile text-[16px] uppercase text-black truncate">Contrast Pocket</h3>
+<span class="font-label-mono text-label-mono text-black">£145</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<a class="md:hidden mt-8 flex items-center justify-center font-label-mono text-label-mono text-on-surface-variant w-full border border-secondary/20 py-4 hover:bg-surface-container transition-colors" href="shop-drops.html">
+                VIEW MANIFEST
+            </a>
+</section>
+<!-- Shop by Age Section -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop w-full max-w-container-max mx-auto border-b border-secondary/20">
+<div class="mb-16 text-center">
+<span class="font-label-mono text-label-mono text-primary-container mb-2 block">MODULE 02</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase">SELECT YOUR FIT</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-0 border border-secondary/20 bg-surface-container-low">
+<!-- Age 4-6 -->
+<a class="group relative block aspect-square md:aspect-[3/4] border-b md:border-b-0 md:border-r border-secondary/20 overflow-hidden" href="index.html#cargo">
+<img alt="Age 4-6" class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500 grayscale group-hover:grayscale-0" src="./screen1.png"/>
+<div class="absolute inset-0 bg-black/40 group-hover:bg-black/10 transition-colors duration-500"></div>
+<div class="absolute inset-0 p-8 flex flex-col justify-between">
+<div class="flex justify-end">
+<span class="material-symbols-outlined text-white text-3xl opacity-0 group-hover:opacity-100 translate-x-4 group-hover:translate-x-0 transition-all duration-300">east</span>
+</div>
+<div>
+<h3 class="font-headline-lg text-headline-lg-mobile md:text-[56px] text-white uppercase leading-none group-hover:text-primary-container transition-colors">AGE<br/>4-6</h3>
+<p class="font-label-mono text-label-mono text-on-surface-variant mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">INITIATE SEQUENCE</p>
+</div>
+</div>
+</a>
+<!-- Age 7-10 (Placeholder visual) -->
+<a class="group relative block aspect-square md:aspect-[3/4] border-b md:border-b-0 md:border-r border-secondary/20 overflow-hidden" href="index.html#cargo">
+<img alt="Age 7-10" class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500 grayscale group-hover:grayscale-0" src="./screen2.png"/>
+<div class="absolute inset-0 bg-black/40 group-hover:bg-black/10 transition-colors duration-500"></div>
+<div class="absolute inset-0 p-8 flex flex-col justify-between">
+<div class="flex justify-end">
+<span class="material-symbols-outlined text-white text-3xl opacity-0 group-hover:opacity-100 translate-x-4 group-hover:translate-x-0 transition-all duration-300">east</span>
+</div>
+<div>
+<h3 class="font-headline-lg text-headline-lg-mobile md:text-[56px] text-white uppercase leading-none group-hover:text-primary-container transition-colors">AGE<br/>7-10</h3>
+<p class="font-label-mono text-label-mono text-on-surface-variant mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">CORE UPGRADE</p>
+</div>
+</div>
+</a>
+<!-- Age 11-16 (Placeholder visual) -->
+<a class="group relative block aspect-square md:aspect-[3/4] overflow-hidden" href="index.html#cargo">
+<img alt="Age 11-16" class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500 grayscale group-hover:grayscale-0" src="./screen3.png"/>
+<div class="absolute inset-0 bg-black/40 group-hover:bg-black/10 transition-colors duration-500"></div>
+<div class="absolute inset-0 p-8 flex flex-col justify-between">
+<div class="flex justify-end">
+<span class="material-symbols-outlined text-white text-3xl opacity-0 group-hover:opacity-100 translate-x-4 group-hover:translate-x-0 transition-all duration-300">east</span>
+</div>
+<div>
+<h3 class="font-headline-lg text-headline-lg-mobile md:text-[56px] text-white uppercase leading-none group-hover:text-primary-container transition-colors">AGE<br/>11-16</h3>
+<p class="font-label-mono text-label-mono text-on-surface-variant mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">MAXIMUM UTILITY</p>
+</div>
+</div>
+</a>
+</div>
+</section>
+<!-- Concept Blurb -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop w-full max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-5 md:col-start-2">
+<span class="font-label-mono text-label-mono text-primary-container mb-4 block">THE MANIFESTO</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-[56px] uppercase leading-none mb-8">
+                        ENGINEERED FOR THE CONCRETE GRID.
+                    </h2>
+</div>
+<div class="md:col-span-4 md:col-start-8 relative">
+<div class="absolute -left-8 top-0 bottom-0 w-px bg-secondary/20 hidden md:block"></div>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-6">
+                        BTC LONDON merges industrial brutalism with high-performance textile engineering. We don't make clothes; we manufacture utility hardware for the modern urban environment.
+                    </p>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                        Every seam, every pocket, and every closure is a deliberate mechanical choice designed to outlast the city's friction.
+                    </p>
+<div class="mt-8 pt-8 border-t border-secondary/20">
+<a class="inline-flex items-center text-on-surface hover:text-primary-container font-subheading-md uppercase transition-colors group" href="index.html#about">
+                            READ THE SPECS 
+                            <span class="material-symbols-outlined ml-2 group-hover:translate-x-2 transition-transform">arrow_right_alt</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer component -->
+<footer class="bg-surface dark:bg-surface border-t border-secondary/20 w-full mt-auto">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-margin-desktop py-section-gap w-full max-w-container-max mx-auto gap-8">
+<!-- Brand Logo -->
+<div class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface uppercase text-center md:text-left">
+                BTC LONDON
+            </div>
+<!-- Links -->
+<div class="flex flex-wrap justify-center md:justify-end gap-x-8 gap-y-4">
+<a class="text-on-surface-variant font-label-mono text-label-mono hover:text-primary transition-all focus:underline" href="#">
+                    PRIVACY
+                </a>
+<a class="text-on-surface-variant font-label-mono text-label-mono hover:text-primary transition-all focus:underline" href="#">
+                    TERMS
+                </a>
+<a class="text-on-surface-variant font-label-mono text-label-mono hover:text-primary transition-all focus:underline" href="#">
+                    SHIPPING
+                </a>
+<a class="text-on-surface-variant font-label-mono text-label-mono hover:text-primary transition-all focus:underline" href="#">
+                    CONTACT
+                </a>
+</div>
+<!-- Copyright -->
+<div class="font-label-mono text-label-mono text-secondary text-center md:text-right w-full md:w-auto md:order-last mt-8 md:mt-0">
+                © 2024 BTC LONDON. ALL RIGHTS RESERVED.
+            </div>
+</div>
+</footer>
+<!-- Simple scroll handler for nav bg & mobile menu toggle -->
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const nav = document.getElementById('top-nav');
+            window.addEventListener('scroll', () => {
+                if (nav) {
+                    if (window.scrollY > 50) {
+                        nav.classList.add('bg-background/95', 'backdrop-blur-md', 'shadow-sm');
+                        nav.classList.remove('bg-background');
+                    } else {
+                        nav.classList.remove('bg-background/95', 'backdrop-blur-md', 'shadow-sm');
+                        nav.classList.add('bg-background');
+                    }
+                }
+            });
+
+            // Mobile Menu Toggle
+            const toggleBtn = document.getElementById('mobile-menu-toggle');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuIcon = document.getElementById('menu-icon');
+
+            if (toggleBtn && mobileMenu && menuIcon) {
+                toggleBtn.addEventListener('click', () => {
+                    const isOpen = !mobileMenu.classList.contains('hidden');
+                    if (isOpen) {
+                        mobileMenu.classList.add('hidden');
+                        menuIcon.textContent = 'menu';
+                    } else {
+                        mobileMenu.classList.remove('hidden');
+                        menuIcon.textContent = 'close';
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
